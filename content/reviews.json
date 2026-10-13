@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sample-review-1",
+    "name": "Anjana & Devadev",
+    "event": "Wedding · Kalpetta",
+    "rating": 5,
+    "quote": "From the mandap to the sadya, everything was flawless. Our guests still talk about the food and the stage décor — FD Events made our day feel like a dream.",
+    "createdAt": "2026-10-09T10:00:00.000Z"
+  },
+  {
+    "id": "sample-review-2",
+    "name": "Afrah & Aslam",
+    "event": "Wedding & reception · Sulthan Bathery",
+    "rating": 5,
+    "quote": "The Islamic counter and the mappilappattu team made our reception unforgettable. Every detail was handled with so much care and grace.",
+    "createdAt": "2026-10-08T10:00:00.000Z"
+  },
+  {
+    "id": "sample-review-3",
+    "name": "Thomas Mathew",
+    "event": "Corporate retreat · Vythiri",
+    "rating": 5,
+    "quote": "Transport, sound, stage and catering for 200 guests — delivered without a single hiccup. Truly a premium, professional team.",
+    "createdAt": "2026-10-07T10:00:00.000Z"
+  },
+  {
+    "id": "sample-review-4",
+    "name": "Riya & Sandeep",
+    "event": "Destination wedding · Vythiri resort",
+    "rating": 5,
+    "quote": "We planned everything from Bangalore over WhatsApp. When we arrived, the venue looked even better than the mood board. Pure magic.",
+    "createdAt": "2026-10-06T10:00:00.000Z"
+  },
+  {
+    "id": "sample-review-5",
+    "name": "Fathima Nasrin",
+    "event": "Mehandi night · Mananthavady",
+    "rating": 5,
+    "quote": "Beautiful bridal mehandi, gorgeous décor and the snack counters were a hit. Thank you for making my mehandi night so special!",
+    "createdAt": "2026-10-05T10:00:00.000Z"
+  },
+  {
+    "id": "sample-review-6",
+    "name": "Joseph & Mariya",
+    "event": "Wedding · Meppadi",
+    "rating": 4,
+    "quote": "Elegant ceremony décor and a wonderful reception buffet. The vintage wedding car was the highlight of our photos.",
+    "createdAt": "2026-10-04T10:00:00.000Z"
+  }
+]

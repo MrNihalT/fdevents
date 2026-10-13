@@ -1,0 +1,149 @@
+[
+  {
+    "id": "sample-1",
+    "title": "Mandap décor for a traditional wedding",
+    "category": "Weddings",
+    "imageUrl": "https://images.unsplash.com/photo-1587271636175-90d58cdad458?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-2",
+    "title": "Bride & groom with family blessings",
+    "category": "Weddings",
+    "imageUrl": "https://images.unsplash.com/photo-1610173827002-62c0f1f05d04?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-30T10:00:00.000Z"
+  },
+  {
+    "id": "sample-3",
+    "title": "Mehandi ceremony details",
+    "category": "Mehandi",
+    "imageUrl": "https://images.unsplash.com/photo-1597157639073-69284dc0fdaf?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-29T10:00:00.000Z"
+  },
+  {
+    "id": "sample-4",
+    "title": "Malabar chicken biryani",
+    "category": "Catering",
+    "imageUrl": "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-28T10:00:00.000Z"
+  },
+  {
+    "id": "sample-5",
+    "title": "Grand buffet counter",
+    "category": "Catering",
+    "imageUrl": "https://images.unsplash.com/photo-1555244162-803834f70033?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-27T10:00:00.000Z"
+  },
+  {
+    "id": "sample-6",
+    "title": "Arabian counter — mandhi platter",
+    "category": "Catering",
+    "imageUrl": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-26T10:00:00.000Z"
+  },
+  {
+    "id": "sample-7",
+    "title": "Dum biryani in copper handi",
+    "category": "Catering",
+    "imageUrl": "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-25T10:00:00.000Z"
+  },
+  {
+    "id": "sample-8",
+    "title": "Wedding hall with chandelier lighting",
+    "category": "Stage & Decor",
+    "imageUrl": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-24T10:00:00.000Z"
+  },
+  {
+    "id": "sample-9",
+    "title": "Floral table styling",
+    "category": "Stage & Decor",
+    "imageUrl": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-23T10:00:00.000Z"
+  },
+  {
+    "id": "sample-10",
+    "title": "Rustic dessert table",
+    "category": "Desserts",
+    "imageUrl": "https://images.unsplash.com/photo-1478146059778-26028b07395a?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-22T10:00:00.000Z"
+  },
+  {
+    "id": "sample-11",
+    "title": "Panna cotta & berry cups",
+    "category": "Desserts",
+    "imageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-21T10:00:00.000Z"
+  },
+  {
+    "id": "sample-12",
+    "title": "Cupcake station",
+    "category": "Desserts",
+    "imageUrl": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-20T10:00:00.000Z"
+  },
+  {
+    "id": "sample-13",
+    "title": "Live stage show",
+    "category": "Music & Sound",
+    "imageUrl": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-19T10:00:00.000Z"
+  },
+  {
+    "id": "sample-14",
+    "title": "Song team performance",
+    "category": "Music & Sound",
+    "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-18T10:00:00.000Z"
+  },
+  {
+    "id": "sample-15",
+    "title": "DJ night console",
+    "category": "Music & Sound",
+    "imageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-17T10:00:00.000Z"
+  },
+  {
+    "id": "sample-16",
+    "title": "Rolls-Royce wedding car",
+    "category": "Vehicles",
+    "imageUrl": "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-16T10:00:00.000Z"
+  },
+  {
+    "id": "sample-21",
+    "title": "Luxury SUV for the wedding party",
+    "category": "Vehicles",
+    "imageUrl": "https://images.unsplash.com/photo-1563720223185-11003d516935?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-16T10:00:00.000Z"
+  },
+  {
+    "id": "sample-17",
+    "title": "Guest transport coach",
+    "category": "Vehicles",
+    "imageUrl": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-15T10:00:00.000Z"
+  },
+  {
+    "id": "sample-18",
+    "title": "Birthday balloon décor",
+    "category": "Parties",
+    "imageUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-14T10:00:00.000Z"
+  },
+  {
+    "id": "sample-19",
+    "title": "Garden reception moments",
+    "category": "Weddings",
+    "imageUrl": "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-13T10:00:00.000Z"
+  },
+  {
+    "id": "sample-20",
+    "title": "Evening dinner under fairy lights",
+    "category": "Parties",
+    "imageUrl": "https://images.unsplash.com/photo-1621112904887-419379ce6824?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-12T10:00:00.000Z"
+  }
+]
