@@ -13,8 +13,8 @@ export const metadata = pageMetadata({
   description:
     "Watch wedding highlights, reception films and stage programs by FD Events, the Wayanad event management team. Real celebrations, beautifully remembered.",
   path: "/films",
-  image: unsplash("photo-1606216794074-735e91aa2c92"),
-  imageAlt: "Couple at a garden wedding reception",
+  image: unsplash("photo-1743684821666-05b9c5046937"),
+  imageAlt: "Bride and groom with garlands on the wedding stage",
   keywords: ["wedding highlights Kerala", "wedding video Wayanad", "event films Wayanad"],
 });
 
@@ -46,8 +46,8 @@ export default async function FilmsPage() {
             Relive the <em>moments</em>
           </>
         }
-        image={unsplash("photo-1606216794074-735e91aa2c92")}
-        imageAlt="Couple at a garden wedding reception"
+        image={unsplash("photo-1743684821666-05b9c5046937")}
+        imageAlt="Bride and groom with garlands on the wedding stage"
         crumbs={[{ name: "Event Films", path: "/films" }]}
       />
 

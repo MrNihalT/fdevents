@@ -38,8 +38,8 @@ export default async function Home() {
           <Parallax offset={30} className="stamp w-[80%] -rotate-3">
             <ImageCurtain className="aspect-[4/5]">
               <Image
-                src={unsplash("photo-1606216794074-735e91aa2c92", 1600)}
-                alt="Couple at a garden wedding reception planned by FD Events in Wayanad"
+                src={unsplash("photo-1764286954620-28029fbae9b6", 1600)}
+                alt="Bride and groom with rose garlands at a wedding planned by FD Events in Wayanad"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 34vw, 80vw"
@@ -50,8 +50,8 @@ export default async function Home() {
           <Parallax offset={-50} className="stamp absolute! bottom-0 right-0 w-[52%] rotate-[4deg]">
             <ImageCurtain className="aspect-square" delay={0.2}>
               <Image
-                src={unsplash("photo-1597157639073-69284dc0fdaf", 1200)}
-                alt="Bridal mehandi by FD Events artists"
+                src={unsplash("photo-1760080839561-6b1228ed2e60", 1200)}
+                alt="Bridal mehandi and bangles by FD Events artists"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 22vw, 50vw"

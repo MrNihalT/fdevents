@@ -11,11 +11,32 @@ import { WhatsAppIcon } from "./icons";
 import { Seal } from "./ornament";
 import { SocialLinks } from "./social";
 
+// `position` keeps faces in frame: phones show a narrow slice of the photo, desktops a wide one.
 const slides = [
-  { src: unsplash("photo-1610173827002-62c0f1f05d04"), caption: "Weddings", alt: "Bride and groom with family at a wedding planned by FD Events, Wayanad" },
-  { src: unsplash("photo-1587271636175-90d58cdad458"), caption: "Stage & Décor", alt: "Floral wedding mandap décor by FD Events" },
-  { src: unsplash("photo-1519167758481-83f550bb49b3"), caption: "Receptions", alt: "Reception hall with chandeliers set for a wedding dinner" },
-  { src: unsplash("photo-1555244162-803834f70033"), caption: "Catering", alt: "Premium buffet counter with live food stations" },
+  {
+    src: unsplash("photo-1644337111604-aa1816b542a1"),
+    caption: "Weddings",
+    alt: "Groom in a sherwani and bride in a red and gold lehenga at a wedding planned by FD Events, Wayanad",
+    position: "object-[70%_center] lg:object-[30%_center]",
+  },
+  {
+    src: unsplash("photo-1759906763315-00afc998eb8e"),
+    caption: "Receptions",
+    alt: "Bride and groom under a tunnel of fairy lights",
+    position: "object-[55%_center] lg:object-center",
+  },
+  {
+    src: unsplash("photo-1731006276695-e93b1440f95f"),
+    caption: "The Bride",
+    alt: "Bride in a red and gold veil on her wedding day",
+    position: "object-[40%_center] lg:object-[35%_center]",
+  },
+  {
+    src: unsplash("photo-1587271636175-90d58cdad458"),
+    caption: "Stage & Décor",
+    alt: "Floral wedding mandap décor by FD Events",
+    position: "object-center",
+  },
 ];
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -38,7 +59,7 @@ export function Hero() {
       ref={ref}
       className="relative isolate flex h-svh max-h-[1050px] min-h-[660px] items-end overflow-hidden bg-ink"
     >
-      <motion.div style={{ y }} className="absolute inset-0 -z-10">
+      <motion.div style={{ y }} className="absolute inset-0 -z-10 overflow-hidden lg:left-[30%]">
         <AnimatePresence initial={false}>
           <motion.div
             key={index}
@@ -61,14 +82,14 @@ export function Hero() {
                 priority={index === 0}
                 quality={90}
                 sizes="100vw"
-                className="object-cover [filter:sepia(0.12)_contrast(1.04)]"
+                className={`object-cover [filter:sepia(0.12)_contrast(1.04)] ${slides[index].position}`}
               />
             </motion.div>
           </motion.div>
         </AnimatePresence>
         {/* Warm grade only where the text sits, so the photo stays bright and crisp */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-ink/10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/55 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-ink/10 lg:from-ink/60 lg:via-transparent lg:to-transparent" />
+        <div className="absolute inset-y-0 left-0 hidden w-1/2 bg-gradient-to-r from-ink to-transparent lg:block" />
       </motion.div>
 
       {/* Social rail */}
@@ -80,18 +101,10 @@ export function Hero() {
         <span className="h-16 w-px bg-cream/40" />
       </div>
 
-      <motion.div style={{ opacity: fade }} className="mx-auto w-full max-w-[90rem] px-6 pb-16 sm:px-8 sm:pb-20 lg:pb-28 xl:pl-24">
+      <motion.div style={{ opacity: fade }} className="mx-auto w-full max-w-[90rem] px-6 pb-10 sm:px-8 sm:pb-20 lg:pb-28 xl:pl-24">
         <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
           <div className="on-dark max-w-4xl text-cream">
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.3, ease }}
-              className="tag"
-            >
-              Est. {site.established} · Wayanad, Kerala
-            </motion.p>
-            <h1 className="display mt-6 text-[3.4rem] sm:text-8xl lg:text-[7.5rem]">
+            <h1 className="display text-[2.4rem] sm:text-6xl lg:text-[4.6rem] xl:text-[5.2rem]">
               <span className="sr-only">{site.name} — Wedding planners &amp; event management in Wayanad. </span>
               {[
                 { text: "Celebrations,", em: false },
@@ -114,7 +127,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 1.05, ease }}
-              className="mt-6 max-w-xl text-lg text-cream/85 sm:text-xl"
+              className="mt-6 hidden max-w-lg text-lg text-cream/85 sm:block"
             >
               Weddings, receptions, catering and every detail in between — planned with old-fashioned care by{" "}
               {site.name}.
@@ -123,7 +136,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 1.2, ease }}
-              className="mt-10 flex flex-col gap-4 sm:flex-row"
+              className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4"
             >
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn btn-cream">
                 <WhatsAppIcon className="h-4 w-4" /> Plan your event

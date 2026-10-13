@@ -1,17 +1,17 @@
 [
   {
-    "id": "sample-1",
-    "title": "Mandap décor for a traditional wedding",
+    "id": "sample-m1",
+    "title": "The couple on their wedding day",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1587271636175-90d58cdad458?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1644337111604-aa1816b542a1?w=2560&q=90&auto=format&fit=crop",
     "createdAt": "2026-10-01T10:00:00.000Z"
   },
   {
-    "id": "sample-2",
-    "title": "Bride & groom with family blessings",
+    "id": "sample-22",
+    "title": "Garlands exchanged on the wedding stage",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1610173827002-62c0f1f05d04?w=2560&q=90&auto=format&fit=crop",
-    "createdAt": "2026-09-30T10:00:00.000Z"
+    "imageUrl": "https://images.unsplash.com/photo-1743684821666-05b9c5046937?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-29T10:00:00.000Z"
   },
   {
     "id": "sample-3",
@@ -35,11 +35,46 @@
     "createdAt": "2026-09-27T10:00:00.000Z"
   },
   {
+    "id": "sample-1",
+    "title": "Mandap décor for a traditional wedding",
+    "category": "Weddings",
+    "imageUrl": "https://images.unsplash.com/photo-1587271636175-90d58cdad458?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
     "id": "sample-6",
     "title": "Arabian counter — mandhi platter",
     "category": "Catering",
     "imageUrl": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=2560&q=90&auto=format&fit=crop",
     "createdAt": "2026-09-26T10:00:00.000Z"
+  },
+  {
+    "id": "sample-m2",
+    "title": "The bride in red and gold",
+    "category": "Weddings",
+    "imageUrl": "https://images.unsplash.com/photo-1731006276695-e93b1440f95f?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-m3",
+    "title": "A quiet moment before the ceremony",
+    "category": "Weddings",
+    "imageUrl": "https://images.unsplash.com/photo-1673073220743-ee78b02eb029?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-m4",
+    "title": "Reception stage in pastel florals",
+    "category": "Weddings",
+    "imageUrl": "https://images.unsplash.com/photo-1775179182715-61dd143f7899?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-2",
+    "title": "Golden-hour portrait of the couple",
+    "category": "Weddings",
+    "imageUrl": "https://images.unsplash.com/photo-1722952908609-4b57e23da1ee?w=2560&q=90&auto=format&fit=crop",
+    "createdAt": "2026-09-30T10:00:00.000Z"
   },
   {
     "id": "sample-7",
@@ -134,9 +169,9 @@
   },
   {
     "id": "sample-19",
-    "title": "Garden reception moments",
+    "title": "Under the fairy-light tunnel",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1759906763315-00afc998eb8e?w=2560&q=90&auto=format&fit=crop",
     "createdAt": "2026-09-13T10:00:00.000Z"
   },
   {
