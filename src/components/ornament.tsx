@@ -49,11 +49,11 @@ export function SectionHeading({
 }
 
 /**
- * Rotating circular seal — "FD EVENTS ✺ WAYANAD ✺ SINCE 2012 ✺" around a monogram,
+ * Rotating circular seal — "FD EVENTS ✺ WEDDINGS ✺ CELEBRATIONS ✺" around a monogram,
  * like the stamp on an old invitation.
  */
 export function Seal({ className = "", light = false }: { className?: string; light?: boolean }) {
-  const text = `${site.name} ✺ Wayanad ✺ Since ${site.established} ✺ `;
+  const text = `${site.name} ✺ Weddings ✺ Celebrations ✺ `;
   return (
     <div aria-hidden="true" className={className}>
       <svg viewBox="0 0 200 200" className={`h-full w-full animate-spin-slow ${light ? "text-cream" : "text-wine"}`}>

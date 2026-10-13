@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Courier_Prime, DM_Serif_Display, Gloock, Lora } from "next/font/google";
+import { Bodoni_Moda, Courier_Prime, Lora } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { JsonLd, siteJsonLd } from "@/components/json-ld";
@@ -8,12 +8,11 @@ import { WhatsAppFloat } from "@/components/whatsapp";
 import { site } from "@/config/site";
 import "./globals.css";
 
-const gloock = Gloock({ variable: "--font-gloock", subsets: ["latin"], weight: "400", display: "swap" });
-const dmSerifItalic = DM_Serif_Display({
-  variable: "--font-dm-serif",
+const bodoni = Bodoni_Moda({
+  variable: "--font-bodoni",
   subsets: ["latin"],
-  weight: "400",
-  style: "italic",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
   display: "swap",
 });
 const lora = Lora({ variable: "--font-lora", subsets: ["latin"], style: ["normal", "italic"], display: "swap" });
@@ -84,7 +83,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-IN" className={`${gloock.variable} ${dmSerifItalic.variable} ${lora.variable} ${courier.variable} antialiased`}>
+    <html lang="en-IN" className={`${bodoni.variable} ${lora.variable} ${courier.variable} antialiased`}>
       <body className="flex min-h-screen flex-col">
         <a
           href="#main"

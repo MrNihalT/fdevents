@@ -5,7 +5,7 @@ import { PageHero } from "@/components/page-hero";
 import { ServiceCard } from "@/components/service-card";
 import { services } from "@/data/services";
 import { whatsappLink } from "@/lib/whatsapp";
-import { unsplash } from "@/lib/images";
+import { photo } from "@/lib/images";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
   description:
     "Weddings, catering, stage décor, buffet & Islamic counters, dessert tables, mehandi, song team, sound, premium cars, bus rental and security — all in Wayanad.",
   path: "/services",
-  image: unsplash("photo-1519225421980-715cb0215aed"),
+  image: photo("photo-1519225421980-715cb0215aed"),
   imageAlt: "Floral table styling at a wedding reception",
   keywords: ["event management services Wayanad", "wedding services Kerala", "catering and decoration Wayanad"],
 });
@@ -28,7 +28,7 @@ export default function ServicesPage() {
             Everything your celebration <em>deserves</em>
           </>
         }
-        image={unsplash("photo-1519225421980-715cb0215aed")}
+        image={photo("photo-1519225421980-715cb0215aed")}
         imageAlt="Floral table styling at a wedding reception"
         crumbs={[{ name: "Services", path: "/services" }]}
       />

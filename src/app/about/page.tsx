@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ornament";
 import { PageHero } from "@/components/page-hero";
 import { site } from "@/config/site";
 import { whatsappLink } from "@/lib/whatsapp";
-import { unsplash } from "@/lib/images";
+import { photo } from "@/lib/images";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
   description:
     "Meet FD Events: a Wayanad team of planners, chefs, decorators, mehandi artists, musicians and drivers creating graceful weddings and celebrations since 2012.",
   path: "/about",
-  image: unsplash("photo-1583939003579-730e3918a45a"),
+  image: photo("photo-1583939003579-730e3918a45a"),
   imageAlt: "Couple celebrating with guests at a wedding",
   keywords: ["about FD Events", "wedding planners Wayanad", "event management company Kalpetta"],
 });
@@ -25,7 +25,7 @@ const steps = [
   { title: "Celebration", text: "On the day, our coordinators run everything so your family can simply enjoy." },
 ];
 
-const img = (id: string) => `https://images.unsplash.com/${id}?w=2560&q=90&auto=format&fit=crop`;
+const img = photo;
 
 export default function AboutPage() {
   return (
@@ -37,7 +37,7 @@ export default function AboutPage() {
             Celebrations with a <em>Kerala heart</em>
           </>
         }
-        image={unsplash("photo-1583939003579-730e3918a45a")}
+        image={photo("photo-1583939003579-730e3918a45a")}
         imageAlt="Couple celebrating with guests at a wedding"
         crumbs={[{ name: "About", path: "/about" }]}
       />

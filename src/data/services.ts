@@ -1,5 +1,4 @@
-const img = (id: string, w = 2000) =>
-  `https://images.unsplash.com/${id}?w=${w}&q=90&auto=format&fit=crop`;
+import { photo as img } from "@/lib/images";
 
 export type Service = {
   slug: string;
@@ -80,7 +79,7 @@ export const services: Service[] = [
     name: "Stage & Décor",
     title: "Stage Programs, Stage Décor & Event Setup",
     icon: "stage",
-    image: img("photo-1519167758481-83f550bb49b3"),
+    image: img("photo-1745573673043-43a4f3b91466"),
     excerpt:
       "Wedding stages, floral décor, entrance arches, lighting and complete stage programs for every kind of event.",
     description: [

@@ -5,7 +5,7 @@ import { PageHero } from "@/components/page-hero";
 import { ReviewCard } from "@/components/reviews";
 import { getReviews } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
-import { unsplash } from "@/lib/images";
+import { photo } from "@/lib/images";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
   description:
     "Read what couples and families say about their weddings, receptions, mehandi nights and corporate events planned by FD Events in Wayanad, Kerala.",
   path: "/reviews",
-  image: unsplash("photo-1511285560929-80b456fea0bc"),
+  image: photo("photo-1511285560929-80b456fea0bc"),
   imageAlt: "Couple releasing balloons at their wedding",
   keywords: ["FD Events reviews", "best event management Wayanad", "wedding planner reviews Kerala"],
 });
@@ -29,7 +29,7 @@ export default async function ReviewsPage() {
             Loved by <em>families</em> across Wayanad
           </>
         }
-        image={unsplash("photo-1511285560929-80b456fea0bc")}
+        image={photo("photo-1511285560929-80b456fea0bc")}
         imageAlt="Couple releasing balloons at their wedding"
         crumbs={[{ name: "Reviews", path: "/reviews" }]}
       />

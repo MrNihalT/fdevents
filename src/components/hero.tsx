@@ -5,37 +5,36 @@ import Link from "next/link";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { site } from "@/config/site";
-import { unsplash } from "@/lib/images";
+import { photo } from "@/lib/images";
 import { whatsappLink } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "./icons";
-import { Seal } from "./ornament";
 import { SocialLinks } from "./social";
 
 // `position` keeps faces in frame: phones show a narrow slice of the photo, desktops a wide one.
 const slides = [
   {
-    src: unsplash("photo-1644337111604-aa1816b542a1"),
+    src: photo("photo-1735415899106-9ad3fbf85308"),
     caption: "Weddings",
-    alt: "Groom in a sherwani and bride in a red and gold lehenga at a wedding planned by FD Events, Wayanad",
-    position: "object-[70%_center] lg:object-[30%_center]",
+    alt: "Bride in red and groom in a navy sherwani in an ornate heritage hall, a wedding by FD Events",
+    position: "object-[72%_center] lg:object-center",
   },
   {
-    src: unsplash("photo-1759906763315-00afc998eb8e"),
+    src: photo("photo-1745573673583-a51f665ae48e"),
+    caption: "Stage & Décor",
+    alt: "Wedding stage decorated with red roses, white florals and golden drapes",
+    position: "object-center",
+  },
+  {
+    src: photo("photo-1750164871195-e7d59d2ebd98"),
+    caption: "The Bride",
+    alt: "Bride in a red and gold bridal outfit with traditional jewellery",
+    position: "object-[45%_center] lg:object-[40%_center]",
+  },
+  {
+    src: photo("photo-1759906763315-00afc998eb8e"),
     caption: "Receptions",
     alt: "Bride and groom under a tunnel of fairy lights",
     position: "object-[55%_center] lg:object-center",
-  },
-  {
-    src: unsplash("photo-1731006276695-e93b1440f95f"),
-    caption: "The Bride",
-    alt: "Bride in a red and gold veil on her wedding day",
-    position: "object-[40%_center] lg:object-[35%_center]",
-  },
-  {
-    src: unsplash("photo-1587271636175-90d58cdad458"),
-    caption: "Stage & Décor",
-    alt: "Floral wedding mandap décor by FD Events",
-    position: "object-center",
   },
 ];
 
@@ -104,7 +103,7 @@ export function Hero() {
       <motion.div style={{ opacity: fade }} className="mx-auto w-full max-w-[90rem] px-6 pb-10 sm:px-8 sm:pb-20 lg:pb-28 xl:pl-24">
         <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
           <div className="on-dark max-w-4xl text-cream">
-            <h1 className="display text-[2.4rem] sm:text-6xl lg:text-[4.6rem] xl:text-[5.2rem]">
+            <h1 className="display text-[2.2rem] sm:text-5xl lg:text-[3.6rem] xl:text-[4rem]">
               <span className="sr-only">{site.name} — Wedding planners &amp; event management in Wayanad. </span>
               {[
                 { text: "Celebrations,", em: false },
@@ -153,7 +152,6 @@ export function Hero() {
             transition={{ duration: 1.2, delay: 1.3, ease }}
             className="hidden flex-col items-end gap-8 lg:flex"
           >
-            <Seal light className="relative h-40 w-40" />
             <div className="w-56 font-mono text-cream">
               <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.14em]">
                 <span>

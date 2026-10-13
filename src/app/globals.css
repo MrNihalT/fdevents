@@ -18,8 +18,8 @@
   --color-mustard-soft: #e4b860;
   --color-whatsapp: #1f9e55;
 
-  --font-display: var(--font-gloock), Georgia, serif;
-  --font-accent: var(--font-dm-serif), Georgia, serif;
+  --font-display: var(--font-bodoni), "Didot", Georgia, serif;
+  --font-accent: var(--font-bodoni), "Didot", Georgia, serif;
   --font-serif: var(--font-lora), Georgia, serif;
   --font-mono: var(--font-courier), "Courier New", monospace;
 
@@ -77,14 +77,15 @@ body::before {
 
   .display {
     font-family: var(--font-display);
-    font-weight: 400;
-    line-height: 1.04;
-    letter-spacing: -0.015em;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
   }
   .display em {
     font-family: var(--font-accent);
     font-style: italic;
-    letter-spacing: -0.01em;
+    font-weight: 400;
     color: var(--color-wine);
   }
   .on-dark .display em,

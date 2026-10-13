@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion";
 import { SectionHeading } from "@/components/ornament";
 import { PageHero } from "@/components/page-hero";
 import { getGallery } from "@/lib/content";
-import { unsplash } from "@/lib/images";
+import { photo } from "@/lib/images";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   description:
     "Browse photo albums of weddings, stage décor, catering spreads, dessert tables, mehandi nights and parties created by FD Events across Wayanad, Kerala.",
   path: "/albums",
-  image: unsplash("photo-1465495976277-4387d4b0b4c6"),
+  image: photo("photo-1465495976277-4387d4b0b4c6"),
   imageAlt: "Wedding rings and bridal bouquet",
   keywords: ["wedding photos Wayanad", "stage decoration photos Kerala", "event gallery Wayanad"],
 });
@@ -29,7 +29,7 @@ export default async function AlbumsPage() {
             Every celebration, <em>a story</em>
           </>
         }
-        image={unsplash("photo-1465495976277-4387d4b0b4c6")}
+        image={photo("photo-1465495976277-4387d4b0b4c6")}
         imageAlt="Wedding rings and bridal bouquet"
         crumbs={[{ name: "Albums", path: "/albums" }]}
       />

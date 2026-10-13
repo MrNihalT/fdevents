@@ -1,6 +1,6 @@
 /**
- * High-resolution Unsplash source. next/image downsizes it per device and
- * re-encodes as AVIF/WebP, so the source should be large and high quality.
+ * Local copy of a stock photo in public/images (downloaded by
+ * scripts/download-images.mjs). next/image resizes it per device and
+ * serves AVIF/WebP, so the original is kept large and high quality.
  */
-export const unsplash = (id: string, width = 2560) =>
-  `https://images.unsplash.com/${id}?w=${width}&q=90&auto=format&fit=crop`;
+export const photo = (id: string) => `/images/${id}.jpg`;

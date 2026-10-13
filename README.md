@@ -3,7 +3,7 @@
 Vintage-retro, premium, SEO-optimised website for **FD Events**, an event management team in Wayanad, Kerala.
 Built with Next.js 16 (App Router, Cache Components), Tailwind CSS v4, Motion (Framer Motion) and Lenis smooth scroll.
 
-**Design:** "Kerala heritage print": aged-paper cream, deep wine, mustard and warm ink; Fraunces display type,
+**Design:** "Kerala heritage print": aged-paper cream, deep wine, mustard and warm ink; Bodoni Moda display type,
 Lora body and Courier Prime typewriter labels; postage-stamp photo frames, a rotating seal badge, halftone texture
 and offset print-shadow buttons. Animations (masked headline reveals, photo curtain reveals, parallax, page
 transitions, scroll progress) are transform-only and respect "reduce motion".
@@ -24,9 +24,14 @@ npm run dev                  # http://localhost:3000
 | Services (text, photos, features, SEO keywords), FAQs | `src/data/services.ts` |
 | Colours & fonts (vintage theme) | `src/app/globals.css`, `src/app/layout.tsx` |
 | Album photos, event films (YouTube) & client reviews | **`/admin`** in the browser (or `content/*.json`) |
+| Site photos (hero, services, about…) | `public/images/` — referenced as `photo("photo-…")` via `src/lib/images.ts` |
 
 The WhatsApp number is `918590962100`. Every "Book / Enquire" button opens WhatsApp with a pre-filled message, and the
 enquiry form sends the visitor's event details (name, date, venue, guests, services) as the message.
+
+All photos are stored in the project (`public/images/`), not hot-linked. To replace one, drop your own JPG in
+`public/images/` and point the code at it. After adding a new Unsplash photo id anywhere in `src/` or `content/`,
+run `node scripts/download-images.mjs` to fetch a local copy.
 
 ## Admin panel — `/admin`
 

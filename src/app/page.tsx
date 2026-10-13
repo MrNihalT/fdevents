@@ -11,7 +11,7 @@ import { YouTubeLite } from "@/components/youtube";
 import { site } from "@/config/site";
 import { getService, services } from "@/data/services";
 import { getGallery, getReviews, getVideos } from "@/lib/content";
-import { unsplash } from "@/lib/images";
+import { photo } from "@/lib/images";
 
 const featured = ["wedding-management", "catering", "stage-events", "islamic-counter", "mehandi", "premium-vehicles"]
   .map(getService)
@@ -38,7 +38,7 @@ export default async function Home() {
           <Parallax offset={30} className="stamp w-[80%] -rotate-3">
             <ImageCurtain className="aspect-[4/5]">
               <Image
-                src={unsplash("photo-1764286954620-28029fbae9b6", 1600)}
+                src={photo("photo-1764286954620-28029fbae9b6")}
                 alt="Bride and groom with rose garlands at a wedding planned by FD Events in Wayanad"
                 fill
                 quality={90}
@@ -50,7 +50,7 @@ export default async function Home() {
           <Parallax offset={-50} className="stamp absolute! bottom-0 right-0 w-[52%] rotate-[4deg]">
             <ImageCurtain className="aspect-square" delay={0.2}>
               <Image
-                src={unsplash("photo-1760080839561-6b1228ed2e60", 1200)}
+                src={photo("photo-1760080839561-6b1228ed2e60")}
                 alt="Bridal mehandi and bangles by FD Events artists"
                 fill
                 quality={90}

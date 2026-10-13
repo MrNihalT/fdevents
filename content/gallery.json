@@ -1,184 +1,233 @@
 [
   {
-    "id": "sample-m1",
-    "title": "The couple on their wedding day",
+    "id": "sample-n1",
+    "title": "A royal welcome in the heritage hall",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1644337111604-aa1816b542a1?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1735415899106-9ad3fbf85308.jpg",
     "createdAt": "2026-10-01T10:00:00.000Z"
   },
   {
     "id": "sample-22",
     "title": "Garlands exchanged on the wedding stage",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1743684821666-05b9c5046937?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1743684821666-05b9c5046937.jpg",
     "createdAt": "2026-09-29T10:00:00.000Z"
   },
   {
     "id": "sample-3",
     "title": "Mehandi ceremony details",
     "category": "Mehandi",
-    "imageUrl": "https://images.unsplash.com/photo-1597157639073-69284dc0fdaf?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1597157639073-69284dc0fdaf.jpg",
     "createdAt": "2026-09-29T10:00:00.000Z"
   },
   {
     "id": "sample-4",
     "title": "Malabar chicken biryani",
     "category": "Catering",
-    "imageUrl": "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1631515243349-e0cb75fb8d3a.jpg",
     "createdAt": "2026-09-28T10:00:00.000Z"
   },
   {
     "id": "sample-5",
     "title": "Grand buffet counter",
     "category": "Catering",
-    "imageUrl": "https://images.unsplash.com/photo-1555244162-803834f70033?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1555244162-803834f70033.jpg",
     "createdAt": "2026-09-27T10:00:00.000Z"
   },
   {
-    "id": "sample-1",
-    "title": "Mandap décor for a traditional wedding",
-    "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1587271636175-90d58cdad458?w=2560&q=90&auto=format&fit=crop",
+    "id": "sample-n2",
+    "title": "Red-and-gold reception stage",
+    "category": "Stage & Decor",
+    "imageUrl": "/images/photo-1745573673583-a51f665ae48e.jpg",
     "createdAt": "2026-10-01T10:00:00.000Z"
   },
   {
     "id": "sample-6",
     "title": "Arabian counter — mandhi platter",
     "category": "Catering",
-    "imageUrl": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1633945274405-b6c8069047b0.jpg",
     "createdAt": "2026-09-26T10:00:00.000Z"
+  },
+  {
+    "id": "sample-n3",
+    "title": "The bride in red and gold",
+    "category": "Weddings",
+    "imageUrl": "/images/photo-1750164871195-e7d59d2ebd98.jpg",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-n4",
+    "title": "Floral arch entrance",
+    "category": "Stage & Decor",
+    "imageUrl": "/images/photo-1745573673043-43a4f3b91466.jpg",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-n5",
+    "title": "Chandelier stage with floral walls",
+    "category": "Stage & Decor",
+    "imageUrl": "/images/photo-1747041807213-197ed4037279.jpg",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-n6",
+    "title": "Garden stage with ivory seating",
+    "category": "Stage & Decor",
+    "imageUrl": "/images/photo-1762709118823-7fe9c9afa8ff.jpg",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-n7",
+    "title": "Bride by the window",
+    "category": "Weddings",
+    "imageUrl": "/images/photo-1750164874154-1bfa2d31af39.jpg",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-m1",
+    "title": "The couple on their wedding day",
+    "category": "Weddings",
+    "imageUrl": "/images/photo-1644337111604-aa1816b542a1.jpg",
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "id": "sample-1",
+    "title": "Mandap décor for a traditional wedding",
+    "category": "Weddings",
+    "imageUrl": "/images/photo-1587271636175-90d58cdad458.jpg",
+    "createdAt": "2026-10-01T10:00:00.000Z"
   },
   {
     "id": "sample-m2",
     "title": "The bride in red and gold",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1731006276695-e93b1440f95f?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1731006276695-e93b1440f95f.jpg",
     "createdAt": "2026-10-01T10:00:00.000Z"
   },
   {
     "id": "sample-m3",
     "title": "A quiet moment before the ceremony",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1673073220743-ee78b02eb029?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1673073220743-ee78b02eb029.jpg",
     "createdAt": "2026-10-01T10:00:00.000Z"
   },
   {
     "id": "sample-m4",
     "title": "Reception stage in pastel florals",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1775179182715-61dd143f7899?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1775179182715-61dd143f7899.jpg",
     "createdAt": "2026-10-01T10:00:00.000Z"
   },
   {
     "id": "sample-2",
     "title": "Golden-hour portrait of the couple",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1722952908609-4b57e23da1ee?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1722952908609-4b57e23da1ee.jpg",
     "createdAt": "2026-09-30T10:00:00.000Z"
   },
   {
     "id": "sample-7",
     "title": "Dum biryani in copper handi",
     "category": "Catering",
-    "imageUrl": "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1701579231305-d84d8af9a3fd.jpg",
     "createdAt": "2026-09-25T10:00:00.000Z"
   },
   {
     "id": "sample-8",
     "title": "Wedding hall with chandelier lighting",
     "category": "Stage & Decor",
-    "imageUrl": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1519167758481-83f550bb49b3.jpg",
     "createdAt": "2026-09-24T10:00:00.000Z"
   },
   {
     "id": "sample-9",
     "title": "Floral table styling",
     "category": "Stage & Decor",
-    "imageUrl": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1519225421980-715cb0215aed.jpg",
     "createdAt": "2026-09-23T10:00:00.000Z"
   },
   {
     "id": "sample-10",
     "title": "Rustic dessert table",
     "category": "Desserts",
-    "imageUrl": "https://images.unsplash.com/photo-1478146059778-26028b07395a?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1478146059778-26028b07395a.jpg",
     "createdAt": "2026-09-22T10:00:00.000Z"
   },
   {
     "id": "sample-11",
     "title": "Panna cotta & berry cups",
     "category": "Desserts",
-    "imageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1488477181946-6428a0291777.jpg",
     "createdAt": "2026-09-21T10:00:00.000Z"
   },
   {
     "id": "sample-12",
     "title": "Cupcake station",
     "category": "Desserts",
-    "imageUrl": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1563729784474-d77dbb933a9e.jpg",
     "createdAt": "2026-09-20T10:00:00.000Z"
   },
   {
     "id": "sample-13",
     "title": "Live stage show",
     "category": "Music & Sound",
-    "imageUrl": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1501281668745-f7f57925c3b4.jpg",
     "createdAt": "2026-09-19T10:00:00.000Z"
   },
   {
     "id": "sample-14",
     "title": "Song team performance",
     "category": "Music & Sound",
-    "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1493225457124-a3eb161ffa5f.jpg",
     "createdAt": "2026-09-18T10:00:00.000Z"
   },
   {
     "id": "sample-15",
     "title": "DJ night console",
     "category": "Music & Sound",
-    "imageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1470225620780-dba8ba36b745.jpg",
     "createdAt": "2026-09-17T10:00:00.000Z"
   },
   {
     "id": "sample-16",
     "title": "Rolls-Royce wedding car",
     "category": "Vehicles",
-    "imageUrl": "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1631295868223-63265b40d9e4.jpg",
     "createdAt": "2026-09-16T10:00:00.000Z"
   },
   {
     "id": "sample-21",
     "title": "Luxury SUV for the wedding party",
     "category": "Vehicles",
-    "imageUrl": "https://images.unsplash.com/photo-1563720223185-11003d516935?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1563720223185-11003d516935.jpg",
     "createdAt": "2026-09-16T10:00:00.000Z"
   },
   {
     "id": "sample-17",
     "title": "Guest transport coach",
     "category": "Vehicles",
-    "imageUrl": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1570125909232-eb263c188f7e.jpg",
     "createdAt": "2026-09-15T10:00:00.000Z"
   },
   {
     "id": "sample-18",
     "title": "Birthday balloon décor",
     "category": "Parties",
-    "imageUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1530103862676-de8c9debad1d.jpg",
     "createdAt": "2026-09-14T10:00:00.000Z"
   },
   {
     "id": "sample-19",
     "title": "Under the fairy-light tunnel",
     "category": "Weddings",
-    "imageUrl": "https://images.unsplash.com/photo-1759906763315-00afc998eb8e?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1759906763315-00afc998eb8e.jpg",
     "createdAt": "2026-09-13T10:00:00.000Z"
   },
   {
     "id": "sample-20",
     "title": "Evening dinner under fairy lights",
     "category": "Parties",
-    "imageUrl": "https://images.unsplash.com/photo-1621112904887-419379ce6824?w=2560&q=90&auto=format&fit=crop",
+    "imageUrl": "/images/photo-1621112904887-419379ce6824.jpg",
     "createdAt": "2026-09-12T10:00:00.000Z"
   }
 ]

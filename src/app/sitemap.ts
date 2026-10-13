@@ -42,7 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${site.url}/services/${s.slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.8,
-      images: [s.image],
+      images: [absolute(s.image)],
     })),
   ];
 }

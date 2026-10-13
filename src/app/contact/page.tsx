@@ -8,7 +8,7 @@ import { PageHero } from "@/components/page-hero";
 import { site } from "@/config/site";
 import { faqs } from "@/data/services";
 import { whatsappLink } from "@/lib/whatsapp";
-import { unsplash } from "@/lib/images";
+import { photo } from "@/lib/images";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
   description:
     "Call or WhatsApp FD Events on +91 85909 62100 to plan your wedding, reception or party in Wayanad. Free quotations, usually within a few hours.",
   path: "/contact",
-  image: unsplash("photo-1519741497674-611481863552"),
+  image: photo("photo-1519741497674-611481863552"),
   imageAlt: "Bride holding a bouquet",
   keywords: ["contact event management Wayanad", "book wedding planner Kalpetta", "event planner phone number Wayanad"],
 });
@@ -47,7 +47,7 @@ export default function ContactPage() {
             Let&apos;s plan something <em>beautiful</em>
           </>
         }
-        image={unsplash("photo-1519741497674-611481863552")}
+        image={photo("photo-1519741497674-611481863552")}
         imageAlt="Bride holding a bouquet"
         crumbs={[{ name: "Contact", path: "/contact" }]}
       />

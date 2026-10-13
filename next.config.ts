@@ -32,7 +32,6 @@ const nextConfig: NextConfig = {
     qualities: [75, 85, 90],
     minimumCacheTTL: 2678400,
     remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "i.ytimg.com", pathname: "/vi/**" },
       ...(supabaseHost
         ? [{ protocol: "https" as const, hostname: supabaseHost, pathname: "/storage/v1/object/public/**" }]
