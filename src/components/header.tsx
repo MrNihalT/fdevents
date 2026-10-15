@@ -24,7 +24,7 @@ export function Header() {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
-  const hasHero = HERO_ROUTES.includes(pathname) || pathname.startsWith("/services/");
+  const hasHero = HERO_ROUTES.includes(pathname) || pathname.startsWith("/services/") || pathname.startsWith("/event-management");
   const solid = scrolled || !hasHero;
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 

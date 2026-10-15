@@ -162,16 +162,16 @@ export function Hero() {
         className="mx-auto w-full max-w-[90rem] px-6 pb-10 sm:px-8 sm:pb-16 lg:pb-0 lg:pt-20 xl:pl-24"
       >
         <div className="on-dark max-w-4xl text-cream lg:max-w-[50%] xl:max-w-[54%]">
-          <motion.p
+          {/* The page's real H1 carries the search phrase; the big line below is the visual headline. */}
+          <motion.h1
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease }}
-            className="tag mb-6 hidden sm:inline-flex"
+            className="tag mb-5 max-w-md text-[0.7rem] leading-relaxed sm:mb-6 sm:max-w-none sm:text-[0.78rem]"
           >
-            Weddings &amp; events · Wayanad
-          </motion.p>
-          <h1 className="display text-[2.4rem] sm:text-5xl lg:text-[3.8rem] xl:text-[4.6rem]">
-            <span className="sr-only">{site.name} — Wedding planners &amp; event management in Wayanad. </span>
+            Event management &amp; wedding planners · Wayanad, Kerala
+          </motion.h1>
+          <p className="display text-[2.4rem] sm:text-5xl lg:text-[3.8rem] xl:text-[4.6rem]">
             {[
               { text: "Celebrations,", em: false },
               { text: "beautifully", em: true },
@@ -188,7 +188,7 @@ export function Hero() {
                 </motion.span>
               </span>
             ))}
-          </h1>
+          </p>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}

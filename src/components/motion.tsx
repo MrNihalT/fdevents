@@ -63,17 +63,22 @@ function ScrollProgress() {
 /** Slides a line of text up from behind a mask — used for section titles. */
 export function MaskReveal({ children, delay = 0 }: { children: ReactNode; delay?: number }) {
   return (
-    <span className="block overflow-hidden pb-[0.12em]">
+    // The visible mask (not the hidden line inside it) is what's watched — a line
+    // pushed fully out of its mask never "intersects", so long titles stayed hidden.
+    <motion.span
+      className="block overflow-hidden pb-[0.12em]"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    >
       <motion.span
         className="block"
-        initial={{ y: "105%", rotate: 2 }}
-        whileInView={{ y: 0, rotate: 0 }}
-        viewport={{ once: true, margin: "-40px" }}
+        variants={{ hidden: { y: "105%", rotate: 2 }, show: { y: 0, rotate: 0 } }}
         transition={{ duration: 1, ease, delay }}
       >
         {children}
       </motion.span>
-    </span>
+    </motion.span>
   );
 }
 

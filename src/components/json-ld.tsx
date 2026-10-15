@@ -102,15 +102,35 @@ export function serviceJsonLd(s: Service) {
   };
 }
 
-export function faqJsonLd() {
+export function faqJsonLd(items: { q: string; a: string }[] = faqs) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
+    mainEntity: items.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
+  };
+}
+
+/** Event management offered in one town or district — for the local landing pages. */
+export function locationJsonLd(l: { slug: string; name: string; district: string; title: string; description: string; image: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${site.url}/event-management/${l.slug}#service`,
+    name: l.title,
+    serviceType: "Event management and wedding planning",
+    description: l.description,
+    image: `${site.url}${l.image}`,
+    url: `${site.url}/event-management/${l.slug}`,
+    provider: { "@id": businessId },
+    areaServed: {
+      "@type": "Place",
+      name: `${l.name}, Kerala`,
+      containedInPlace: { "@type": "AdministrativeArea", name: `${l.district}, Kerala, India` },
+    },
   };
 }
 

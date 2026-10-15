@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/config/site";
+import { locations } from "@/data/locations";
 import { services } from "@/data/services";
 import { getGallery, getVideos } from "@/lib/content";
 
@@ -34,6 +35,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${site.url}/reviews`, changeFrequency: "weekly", priority: 0.6 },
     { url: `${site.url}/about`, changeFrequency: "yearly", priority: 0.6 },
     { url: `${site.url}/contact`, changeFrequency: "yearly", priority: 0.8 },
+    { url: `${site.url}/event-management`, changeFrequency: "monthly", priority: 0.9 },
+    ...locations.map((l) => ({
+      url: `${site.url}/event-management/${l.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: l.slug === "wayanad" ? 0.95 : 0.85,
+      images: [absolute(l.image)],
+    })),
   ];
 
   return [

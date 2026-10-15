@@ -34,7 +34,7 @@ export function PageHero({
           priority
           quality={90}
           sizes="100vw"
-          className="object-cover [filter:sepia(0.12)_contrast(1.04)]"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-ink/25" />
       </div>
@@ -58,7 +58,13 @@ export function PageHero({
           </ol>
         </nav>
         <p className="tag mt-10">{tag}</p>
-        <h1 className="display mt-5 max-w-5xl text-5xl sm:text-7xl lg:text-8xl">
+        <h1
+          className={`display mt-5 max-w-5xl ${
+            typeof title === "string" && title.length > 40
+              ? "text-[2.1rem] leading-[1.12] sm:text-6xl lg:text-7xl"
+              : "text-5xl sm:text-7xl lg:text-8xl"
+          }`}
+        >
           <MaskReveal delay={0.15}>{title}</MaskReveal>
         </h1>
         {children && <div className="mt-6 max-w-2xl text-lg text-cream/80">{children}</div>}

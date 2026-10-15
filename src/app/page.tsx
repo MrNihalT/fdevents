@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/hero";
+import { JsonLd, faqJsonLd } from "@/components/json-ld";
 import { ServiceMarquee } from "@/components/marquee";
 import { CountUp, ImageCurtain, Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { Seal, SectionHeading } from "@/components/ornament";
@@ -9,9 +11,35 @@ import { ServiceCard } from "@/components/service-card";
 import { WorkGrid } from "@/components/work-grid";
 import { YouTubeLite } from "@/components/youtube";
 import { site } from "@/config/site";
+import { locations } from "@/data/locations";
 import { getService, services } from "@/data/services";
 import { getGallery, getReviews, getVideos } from "@/lib/content";
 import { photo } from "@/lib/images";
+
+export const metadata: Metadata = {
+  description:
+    "Wayanad's trusted event management team & wedding planners. Weddings, nikah and receptions across Kerala — catering, décor, Islamic counters, mehandi. Free quotes.",
+  alternates: { canonical: "/" },
+};
+
+const homeFaqs = [
+  {
+    q: "Why choose FD Events as your event management team in Wayanad?",
+    a: "We have planned weddings and events in Wayanad since 2012 with our own in-house team — décor, catering, Islamic and buffet counters, mehandi, sound, cars, buses and security — so one call covers everything, and we know local venues, seasons and roads first-hand.",
+  },
+  {
+    q: "Do you plan Muslim weddings in Kerala — nikah, walima and mylanchi?",
+    a: "Yes. Malabar Muslim weddings are a large part of our work: mylanchi nights with oppana and mappilappattu, nikah stage and décor, walima and receptions, separate seating where families prefer it, and Islamic and Arabian food counters.",
+  },
+  {
+    q: "Do you only work in Wayanad?",
+    a: "Wayanad is home, but we plan events across North Kerala — Kozhikode, Malappuram and Kannur — and destination weddings at Wayanad resorts for families from anywhere.",
+  },
+  {
+    q: "How much does wedding event management cost in Wayanad?",
+    a: "It depends on guest count, venue and the services you choose. Share your date, venue and guest list on WhatsApp and we send an itemised quotation, usually within a few hours — you can book the full event or a single service.",
+  },
+];
 
 const featured = ["wedding-management", "catering", "stage-events", "islamic-counter", "mehandi", "premium-vehicles"]
   .map(getService)
@@ -151,6 +179,54 @@ export default async function Home() {
           </div>
         </section>
       )}
+
+      {/* Areas + FAQ: the plain-language answers people (and Google) look for */}
+      <section className="mx-auto grid max-w-[90rem] gap-20 px-6 py-28 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:py-36">
+        <JsonLd data={faqJsonLd(homeFaqs)} />
+        <Reveal>
+          <p className="tag">Wayanad &amp; across Kerala</p>
+          <h2 className="display mt-6 text-5xl text-ink sm:text-6xl">
+            Kerala&apos;s celebrations, <em>rooted</em> in Wayanad.
+          </h2>
+          <p className="mt-8 text-lg text-muted">
+            From nikahs and walimas in Malabar to temple weddings with sadya and church receptions, {site.name} plans
+            weddings and events for every family — in Wayanad, Kozhikode, Malappuram, Kannur and beyond.
+          </p>
+          <ul className="mt-10 grid grid-cols-2 gap-x-8 border-t-[1.5px] border-ink sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+            {locations.map((l) => (
+              <li key={l.slug} className="border-b border-dashed border-rule">
+                <Link
+                  href={`/event-management/${l.slug}`}
+                  className="group flex items-center justify-between py-4 text-ink transition-colors hover:text-wine"
+                >
+                  <span className="display text-xl">{l.name}</span>
+                  <span aria-hidden="true" className="font-mono text-wine transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+        <Reveal delay={0.15}>
+          <div className="divide-y divide-dashed divide-rule border-y-[1.5px] border-ink">
+            {homeFaqs.map((f, i) => (
+              <details key={f.q} className="group py-6" open={i === 0}>
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+                  <h3 className="display text-2xl leading-snug text-ink">{f.q}</h3>
+                  <span
+                    aria-hidden="true"
+                    className="mt-1 font-mono text-2xl text-wine transition-transform duration-300 group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 text-muted">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </Reveal>
+      </section>
 
       {/* Client reviews */}
       {reviews.length > 0 && (

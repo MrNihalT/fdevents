@@ -1,7 +1,7 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useSpring } from "motion/react";
+import { useEffect, useId, useState } from "react";
 import type { Review } from "@/lib/content/types";
 
 export function Stars({ rating, className = "" }: { rating: number; className?: string }) {
@@ -86,9 +86,9 @@ export function ReviewCarousel({ reviews }: { reviews: Review[] }) {
       </div>
 
       {reviews.length > 1 && (
-        <div className="mt-12 flex items-end justify-center gap-5 sm:gap-8">
-          <ArchButton label="Previous review" onClick={() => go(-1)} flip />
-          <div className="w-36 pb-1 sm:w-52">
+        <div className="mt-12 flex items-center justify-center gap-3 sm:gap-8">
+          <MedallionButton label="Previous review" onClick={() => go(-1)} flip />
+          <div className="w-28 sm:w-52">
             <p className="flex items-baseline justify-center gap-2 font-mono text-xs tracking-[0.14em] text-muted">
               <span className="display text-3xl tracking-normal text-wine">{String(index + 1).padStart(2, "0")}</span>
               <span>/ {String(reviews.length).padStart(2, "0")}</span>
@@ -115,40 +115,94 @@ export function ReviewCarousel({ reviews }: { reviews: Review[] }) {
               ))}
             </div>
           </div>
-          <ArchButton label="Next review" onClick={() => go(1)} />
+          <MedallionButton label="Next review" onClick={() => go(1)} />
         </div>
       )}
     </div>
   );
 }
 
-/** Arch-shaped control: wine rises from the base on hover, the long arrow steps forward. */
-function ArchButton({ label, onClick, flip = false }: { label: string; onClick: () => void; flip?: boolean }) {
+/**
+ * Medallion control in the style of the site's seal: circular typewriter text
+ * that turns on hover, a wine disc that fills from the centre, an arrow that
+ * loops through, and a gentle magnetic pull towards the cursor.
+ */
+function MedallionButton({ label, onClick, flip = false }: { label: string; onClick: () => void; flip?: boolean }) {
+  const id = useId();
+  const x = useSpring(0, { stiffness: 220, damping: 18, mass: 0.4 });
+  const y = useSpring(0, { stiffness: 220, damping: 18, mass: 0.4 });
+  // Repeated so it wraps the whole circle; letter-spacing evens out the two word lengths.
+  const word = `${flip ? "Previous" : "Next"} story ✺ `;
+  const ring = word.repeat(flip ? 2 : 3);
+  const arrow = (
+    <svg viewBox="0 0 32 12" className="h-3 w-8" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M1 6h29M25 1.5 30.5 6 25 10.5" />
+    </svg>
+  );
+
   return (
-    <button
+    <motion.button
       type="button"
       aria-label={label}
       onClick={onClick}
-      className="group relative grid h-[4.25rem] w-14 shrink-0 place-items-center overflow-hidden rounded-t-full border-[1.5px] border-ink text-ink shadow-[3px_3px_0_var(--color-mustard)] transition-[color,box-shadow,translate] duration-300 hover:text-cream active:translate-x-[3px] active:translate-y-[3px] active:shadow-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
+      style={{ x, y }}
+      onPointerMove={(e) => {
+        if (e.pointerType !== "mouse") return;
+        const r = e.currentTarget.getBoundingClientRect();
+        x.set((e.clientX - r.left - r.width / 2) * 0.28);
+        y.set((e.clientY - r.top - r.height / 2) * 0.28);
+      }}
+      onPointerLeave={() => {
+        x.set(0);
+        y.set(0);
+      }}
+      whileTap={{ scale: 0.92 }}
+      className="group relative grid h-[5.5rem] w-[5.5rem] shrink-0 place-items-center rounded-full text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine sm:h-28 sm:w-28"
     >
+      {/* Circular text: always drifting, and turns a third further on hover */}
       <span
         aria-hidden="true"
-        className="absolute inset-0 origin-bottom scale-y-0 bg-wine transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100"
-      />
-      <svg
-        viewBox="0 0 32 12"
-        className={`relative mt-2 h-3 w-8 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          flip ? "-scale-x-100 group-hover:-translate-x-1" : "group-hover:translate-x-1"
-        }`}
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        className="absolute inset-0 transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-[120deg]"
       >
-        <path d="M1 6h29M25 1.5 30.5 6 25 10.5" />
-      </svg>
-    </button>
+        <svg viewBox="0 0 200 200" className={`h-full w-full animate-spin-slow text-wine ${flip ? "[animation-direction:reverse]" : ""}`}>
+          <defs>
+            <path id={id} d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0" />
+          </defs>
+          <text
+            fill="currentColor"
+            style={{
+              fontFamily: "var(--font-courier)",
+              fontSize: 15,
+              fontWeight: 700,
+              textTransform: "uppercase",
+              // Courier advances 0.6em (9px) per glyph; spread them over the 515px circumference.
+              letterSpacing: `${(515 - ring.length * 9) / ring.length}px`,
+            }}
+          >
+            <textPath href={`#${id}`}>
+              {ring}
+            </textPath>
+          </text>
+        </svg>
+      </span>
+
+      {/* Centre disc */}
+      <span className="relative grid h-12 w-12 place-items-center overflow-hidden rounded-full border-[1.5px] border-ink bg-card shadow-[3px_3px_0_var(--color-mustard)] transition-[color,box-shadow] duration-500 group-hover:text-cream group-hover:shadow-[0_0_0_var(--color-mustard)] sm:h-14 sm:w-14">
+        <span
+          aria-hidden="true"
+          className="absolute inset-0 scale-0 rounded-full bg-wine transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-100"
+        />
+        {/* Arrow loops: the visible one slides out, its twin slides in from the other side */}
+        <span aria-hidden="true" className={`relative block h-3 w-8 overflow-hidden ${flip ? "-scale-x-100" : ""}`}>
+          <span className="absolute inset-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-[150%]">
+            {arrow}
+          </span>
+          <span className="absolute inset-0 -translate-x-[150%] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0">
+            {arrow}
+          </span>
+        </span>
+      </span>
+    </motion.button>
   );
 }
 

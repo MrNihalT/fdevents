@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navLinks, site } from "@/config/site";
+import { locations } from "@/data/locations";
 import { services } from "@/data/services";
 import { whatsappLink } from "@/lib/whatsapp";
 import { ClockIcon, MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "./icons";
@@ -37,8 +38,16 @@ export function Footer() {
             <p className="mt-6 max-w-sm text-[0.95rem] text-cream/70">{site.description}</p>
             <div className="mt-8">
               <p className="label text-cream/60!">Follow our celebrations</p>
-              <div className="mt-4">
+              <div className="mt-4 flex flex-wrap items-center gap-4">
                 <SocialLinks tone="light" />
+                <a
+                  href={site.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-sm text-cream/75 transition-colors hover:text-mustard-soft"
+                >
+                  @{site.instagramHandle}
+                </a>
               </div>
             </div>
           </div>
@@ -98,6 +107,23 @@ export function Footer() {
             </ul>
           </address>
         </div>
+
+        <nav aria-label="Areas we serve" className="border-t border-dashed border-cream/25 py-8">
+          <p className="flex flex-wrap items-baseline gap-x-5 gap-y-2 text-[0.95rem]">
+            <Link href="/event-management" className="tag mr-2 hover:text-cream">
+              Event management in
+            </Link>
+            {locations.map((l) => (
+              <Link
+                key={l.slug}
+                href={`/event-management/${l.slug}`}
+                className="text-cream/75 transition-colors hover:text-mustard-soft"
+              >
+                {l.name}
+              </Link>
+            ))}
+          </p>
+        </nav>
 
         <div className="flex flex-col items-center justify-between gap-3 border-t border-dashed border-cream/25 py-7 font-mono text-xs uppercase tracking-[0.12em] text-cream/55 sm:flex-row">
           <p>

@@ -6,7 +6,7 @@ export const site = {
   shortName: "FD Events",
   tagline: "Timeless Celebrations, Crafted in the Hills of Wayanad",
   description:
-    "FD Events is a full-service event management team in Wayanad, Kerala — weddings, catering, stage & decor, buffet and Islamic counters, mehandi, song team, sound, premium vehicles, buses and security.",
+    "FD Events is Wayanad's full-service event management team — weddings, nikah & receptions across Kerala, with catering, stage décor, Islamic counters, mehandi, sound, cars and buses.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
   phone: "+91 85909 62100",
   phoneRaw: "+918590962100",

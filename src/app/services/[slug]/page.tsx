@@ -14,6 +14,10 @@ import { getService, services } from "@/data/services";
 import { pageMetadata } from "@/lib/seo";
 import { serviceEnquiryMessage, whatsappLink } from "@/lib/whatsapp";
 
+// Every slug is prerendered below, so navigations get static HTML; skip the
+// dev-only "params outside <Suspense>" instant-navigation check.
+export const instant = false;
+
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
