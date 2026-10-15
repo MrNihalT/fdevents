@@ -28,7 +28,7 @@ export function WorkGrid({ items }: { items: GalleryItem[] }) {
               fill
               sizes={layout[i].includes("col-span-2") ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 768px) 25vw, 50vw"}
               quality={85}
-              className="film object-cover group-hover:scale-105"
+              className="film object-cover object-[50%_30%] group-hover:scale-105"
               />
             </ImageCurtain>
             <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/0 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

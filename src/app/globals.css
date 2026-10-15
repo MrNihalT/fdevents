@@ -25,6 +25,33 @@
 
   --animate-marquee: marquee 45s linear infinite;
   --animate-spin-slow: spin 28s linear infinite;
+  --animate-kenburns: kenburns 8.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  --animate-progress: progress linear forwards;
+  --animate-arch-reveal: arch-reveal 1.5s cubic-bezier(0.76, 0, 0.24, 1) 0.1s both;
+  @keyframes kenburns {
+    from {
+      transform: scale(1.09);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  @keyframes progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  @keyframes arch-reveal {
+    from {
+      clip-path: inset(100% 0 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
   @keyframes marquee {
     from {
       transform: translateX(0);
@@ -45,6 +72,13 @@ html.lenis body {
 }
 .lenis [data-lenis-prevent] {
   overscroll-behavior: contain;
+}
+
+/* Never let a stray wide element create sideways scroll on phones.
+   `clip` (unlike `hidden`) keeps position: sticky working. */
+html,
+body {
+  overflow-x: clip;
 }
 
 body {

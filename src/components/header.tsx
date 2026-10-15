@@ -37,7 +37,7 @@ export function Header() {
             : "bg-gradient-to-b from-ink/55 to-transparent py-6"
         }`}
       >
-        <div className="mx-auto flex max-w-[90rem] items-center justify-between gap-6 px-5 sm:px-8">
+        <div className="mx-auto flex max-w-[90rem] items-center justify-between gap-6 px-6 sm:px-8">
           <Link href="/" aria-label={`${site.name} home`} onClick={() => setOpen(false)}>
             <Logo light={!solid} />
           </Link>

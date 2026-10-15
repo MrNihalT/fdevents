@@ -1,5 +1,82 @@
 [
   {
+    "id": "kl-2",
+    "title": "Bride in red and Malabar gold",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-10302293.jpg",
+    "createdAt": "2026-10-15T10:00:00.000Z"
+  },
+  {
+    "id": "kl-4",
+    "title": "Mehandi and the wedding ring",
+    "category": "Mehandi",
+    "imageUrl": "/images/pexels-4090997.jpg",
+    "createdAt": "2026-10-14T10:00:00.000Z"
+  },
+  {
+    "id": "kl-3",
+    "title": "The bride under the lights",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-38080278.jpg",
+    "createdAt": "2026-10-13T10:00:00.000Z"
+  },
+  {
+    "id": "kl-5",
+    "title": "Reception portrait in blush pink",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-26990498.jpg",
+    "createdAt": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": "kl-8",
+    "title": "Garlands at a Kerala wedding",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-7669989.jpg",
+    "createdAt": "2026-10-11T10:00:00.000Z"
+  },
+  {
+    "id": "kl-6",
+    "title": "Walking in to the reception hall",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-32878569.jpg",
+    "createdAt": "2026-10-10T10:00:00.000Z"
+  },
+  {
+    "id": "kl-1",
+    "title": "The couple at a night reception",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-38080272.jpg",
+    "createdAt": "2026-10-09T10:00:00.000Z"
+  },
+  {
+    "id": "kl-7",
+    "title": "A quiet moment after the nikah",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-16987433.jpg",
+    "createdAt": "2026-10-08T10:00:00.000Z"
+  },
+  {
+    "id": "kl-9",
+    "title": "Exchanging garlands",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-30304835.jpg",
+    "createdAt": "2026-10-07T10:00:00.000Z"
+  },
+  {
+    "id": "kl-10",
+    "title": "Bride and groom in red and ivory",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-38080280.jpg",
+    "createdAt": "2026-10-06T10:00:00.000Z"
+  },
+  {
+    "id": "kl-11",
+    "title": "Hand in hand at golden hour",
+    "category": "Weddings",
+    "imageUrl": "/images/pexels-17843095.jpg",
+    "createdAt": "2026-10-05T10:00:00.000Z"
+  },
+  {
     "id": "sample-n1",
     "title": "A royal welcome in the heritage hall",
     "category": "Weddings",

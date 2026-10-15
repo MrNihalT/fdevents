@@ -38,8 +38,8 @@ export default async function Home() {
           <Parallax offset={30} className="stamp w-[80%] -rotate-3">
             <ImageCurtain className="aspect-[4/5]">
               <Image
-                src={photo("photo-1764286954620-28029fbae9b6")}
-                alt="Bride and groom with rose garlands at a wedding planned by FD Events in Wayanad"
+                src={photo("pexels-36740097")}
+                alt="Smiling bride lifting her red hijab dupatta at a Malabar wedding planned by FD Events"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 34vw, 80vw"
@@ -50,8 +50,8 @@ export default async function Home() {
           <Parallax offset={-50} className="stamp absolute! bottom-0 right-0 w-[52%] rotate-[4deg]">
             <ImageCurtain className="aspect-square" delay={0.2}>
               <Image
-                src={photo("photo-1760080839561-6b1228ed2e60")}
-                alt="Bridal mehandi and bangles by FD Events artists"
+                src={photo("pexels-29169318")}
+                alt="Bridal mehandi and gold bangles by FD Events artists"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 22vw, 50vw"
@@ -59,7 +59,7 @@ export default async function Home() {
               />
             </ImageCurtain>
           </Parallax>
-          <Seal className="absolute -right-4 -top-8 h-32 w-32 sm:h-36 sm:w-36" />
+          <Seal className="absolute -top-8 right-0 h-28 w-28 sm:-right-4 sm:h-36 sm:w-36" />
         </Reveal>
 
         <Reveal delay={0.15}>

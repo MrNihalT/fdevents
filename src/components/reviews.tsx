@@ -16,38 +16,64 @@ export function Stars({ rating, className = "" }: { rating: number; className?: 
   );
 }
 
-/** Rotating testimonial with large quote, for the home page. */
+const DELAY = 7000;
+
+/** Rotating testimonial with large quote, for the home page. Swipe, arrow keys or the arch buttons. */
 export function ReviewCarousel({ reviews }: { reviews: Review[] }) {
-  const [index, setIndex] = useState(0);
+  const [[index, dir], setState] = useState<[number, 1 | -1]>([0, 1]);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     if (paused || reviews.length < 2) return;
-    const t = setTimeout(() => setIndex((i) => (i + 1) % reviews.length), 7000);
+    const t = setTimeout(() => setState(([i]) => [(i + 1) % reviews.length, 1]), DELAY);
     return () => clearTimeout(t);
   }, [index, paused, reviews.length]);
 
   if (!reviews.length) return null;
   const r = reviews[index];
-  const go = (dir: 1 | -1) => setIndex((i) => (i + dir + reviews.length) % reviews.length);
+  const go = (d: 1 | -1) => setState(([i]) => [(i + d + reviews.length) % reviews.length, d]);
+  const jump = (i: number) => setState(([cur]) => [i, i >= cur ? 1 : -1]);
 
   return (
     <div
       className="relative mx-auto max-w-4xl text-center"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+      onKeyDown={(e) => {
+        if (e.key === "ArrowLeft") go(-1);
+        if (e.key === "ArrowRight") go(1);
+      }}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Client reviews"
     >
       <span aria-hidden="true" className="display block text-[9rem] leading-[0.6] text-wine/30">
         “
       </span>
-      <div className="relative min-h-[18rem] sm:min-h-[15rem]">
-        <AnimatePresence mode="wait">
+      <div className="relative min-h-[19rem] touch-pan-y sm:min-h-[15rem]" aria-live={paused ? "polite" : "off"}>
+        <AnimatePresence mode="wait" custom={dir} initial={false}>
           <motion.figure
             key={r.id}
-            initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            exit={{ opacity: 0, y: -16, filter: "blur(6px)" }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            custom={dir}
+            variants={{
+              enter: (d: number) => ({ opacity: 0, x: d * 40 }),
+              center: { opacity: 1, x: 0 },
+              exit: (d: number) => ({ opacity: 0, x: d * -40 }),
+            }}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            drag={reviews.length > 1 ? "x" : false}
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.18}
+            onDragEnd={(_, info) => {
+              if (info.offset.x < -60 || info.velocity.x < -400) go(1);
+              else if (info.offset.x > 60 || info.velocity.x > 400) go(-1);
+            }}
+            className="cursor-grab active:cursor-grabbing"
           >
             <Stars rating={r.rating} />
             <blockquote className="display mt-6 text-2xl leading-snug text-ink sm:text-[2.3rem]">&ldquo;{r.quote}&rdquo;</blockquote>
@@ -60,37 +86,67 @@ export function ReviewCarousel({ reviews }: { reviews: Review[] }) {
       </div>
 
       {reviews.length > 1 && (
-        <div className="mt-10 flex items-center justify-center gap-6">
-          <ArrowButton label="Previous review" onClick={() => go(-1)} d="M15 5l-7 7 7 7" />
-          <div className="flex gap-2">
-            {reviews.map((rv, i) => (
-              <button
-                key={rv.id}
-                type="button"
-                aria-label={`Show review ${i + 1}`}
-                aria-current={i === index}
-                onClick={() => setIndex(i)}
-                className={`h-1.5 rounded-full transition-all duration-500 ${i === index ? "w-8 bg-wine" : "w-1.5 bg-rule hover:bg-wine/60"}`}
-              />
-            ))}
+        <div className="mt-12 flex items-end justify-center gap-5 sm:gap-8">
+          <ArchButton label="Previous review" onClick={() => go(-1)} flip />
+          <div className="w-36 pb-1 sm:w-52">
+            <p className="flex items-baseline justify-center gap-2 font-mono text-xs tracking-[0.14em] text-muted">
+              <span className="display text-3xl tracking-normal text-wine">{String(index + 1).padStart(2, "0")}</span>
+              <span>/ {String(reviews.length).padStart(2, "0")}</span>
+            </p>
+            <div className="mt-3 flex gap-1">
+              {reviews.map((rv, i) => (
+                <button
+                  key={rv.id}
+                  type="button"
+                  aria-label={`Show review ${i + 1}`}
+                  aria-current={i === index}
+                  onClick={() => jump(i)}
+                  className="group/seg relative flex-1 py-2"
+                >
+                  <span className={`block h-[2px] transition-colors ${i < index ? "bg-wine" : "bg-rule group-hover/seg:bg-wine/50"}`} />
+                  {i === index && (
+                    <span
+                      key={index}
+                      className="absolute left-0 top-2 h-[2px] w-full origin-left animate-progress bg-wine"
+                      style={{ animationDuration: `${DELAY}ms`, animationPlayState: paused ? "paused" : "running" }}
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
           </div>
-          <ArrowButton label="Next review" onClick={() => go(1)} d="M9 5l7 7-7 7" />
+          <ArchButton label="Next review" onClick={() => go(1)} />
         </div>
       )}
     </div>
   );
 }
 
-function ArrowButton({ label, onClick, d }: { label: string; onClick: () => void; d: string }) {
+/** Arch-shaped control: wine rises from the base on hover, the long arrow steps forward. */
+function ArchButton({ label, onClick, flip = false }: { label: string; onClick: () => void; flip?: boolean }) {
   return (
     <button
       type="button"
       aria-label={label}
       onClick={onClick}
-      className="grid h-12 w-12 place-items-center rounded-full border-[1.5px] border-ink text-ink transition-colors hover:bg-ink hover:text-cream"
+      className="group relative grid h-[4.25rem] w-14 shrink-0 place-items-center overflow-hidden rounded-t-full border-[1.5px] border-ink text-ink shadow-[3px_3px_0_var(--color-mustard)] transition-[color,box-shadow,translate] duration-300 hover:text-cream active:translate-x-[3px] active:translate-y-[3px] active:shadow-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wine"
     >
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.3">
-        <path d={d} />
+      <span
+        aria-hidden="true"
+        className="absolute inset-0 origin-bottom scale-y-0 bg-wine transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100"
+      />
+      <svg
+        viewBox="0 0 32 12"
+        className={`relative mt-2 h-3 w-8 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          flip ? "-scale-x-100 group-hover:-translate-x-1" : "group-hover:translate-x-1"
+        }`}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M1 6h29M25 1.5 30.5 6 25 10.5" />
       </svg>
     </button>
   );

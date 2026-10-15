@@ -1,4 +1,4 @@
-// Downloads every Unsplash photo referenced in the code/content into public/images,
+// Downloads every Unsplash / Pexels photo referenced in the code/content into public/images,
 // so the site serves its own copies instead of hot-linking.
 // Usage: node scripts/download-images.mjs [extra-photo-ids...]
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
@@ -21,7 +21,7 @@ function walk(dir, files = []) {
 
 const ids = new Set(process.argv.slice(2));
 for (const file of [...walk(path.join(ROOT, "src")), ...walk(path.join(ROOT, "content"))]) {
-  for (const m of readFileSync(file, "utf8").matchAll(/photo-\d+-[0-9a-f]+/g)) ids.add(m[0]);
+  for (const m of readFileSync(file, "utf8").matchAll(/photo-\d+-[0-9a-f]+|pexels-\d+/g)) ids.add(m[0]);
 }
 
 await mkdir(OUT, { recursive: true });
@@ -29,7 +29,12 @@ let downloaded = 0;
 for (const id of ids) {
   const dest = path.join(OUT, `${id}.jpg`);
   if (existsSync(dest)) continue;
-  const res = await fetch(`https://images.unsplash.com/${id}?w=${WIDTH}&q=${QUALITY}&fm=jpg&fit=max`);
+  const pexels = id.match(/^pexels-(\d+)$/)?.[1];
+  const res = await fetch(
+    pexels
+      ? `https://images.pexels.com/photos/${pexels}/pexels-photo-${pexels}.jpeg?auto=compress&cs=tinysrgb&w=${WIDTH}`
+      : `https://images.unsplash.com/${id}?w=${WIDTH}&q=${QUALITY}&fm=jpg&fit=max`,
+  );
   if (!res.ok) {
     console.warn(`skip ${id}: HTTP ${res.status}`);
     continue;
