@@ -64,7 +64,8 @@ export function siteJsonLd() {
         },
         areaServed: site.areaServed.map((name) => ({ "@type": "City", name })),
         knowsAbout: services.map((s) => s.name),
-        sameAs: Object.values(site.social),
+        // Only real profile URLs — a bare "facebook.com/" would confuse Google's entity matching.
+        sameAs: Object.values(site.social).filter((u) => new URL(u).pathname.length > 1),
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Event Management Services",

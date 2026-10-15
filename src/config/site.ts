@@ -34,8 +34,10 @@ export const site = {
     "Malappuram",
   ],
   hours: "Mo-Su 08:00-21:00",
+  instagramHandle: "fd_events.in",
+  // Replace the bare facebook.com / youtube.com links with the real pages when they exist.
   social: {
-    instagram: "https://instagram.com/",
+    instagram: "https://www.instagram.com/fd_events.in/",
     facebook: "https://facebook.com/",
     youtube: "https://youtube.com/",
   },
