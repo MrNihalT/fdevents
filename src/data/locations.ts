@@ -33,16 +33,16 @@ export const locations: Location[] = [
     district: "Wayanad district",
     title: "Event Management & Wedding Planners in Wayanad",
     description:
-      "Wayanad's own event management team — weddings, nikah & receptions, catering, stage décor, mehandi and resort events, planned end-to-end from Kalpetta. Free quotes.",
+      "Wayanad's own event management team — weddings, engagements & receptions, catering, stage décor, mehandi and resort events, planned end-to-end from Kalpetta. Free quotes.",
     image: img("pexels-16987433"),
-    imageAlt: "Groom kissing his bride's forehead at a Malabar Muslim wedding planned in Wayanad",
+    imageAlt: "Groom kissing his bride's forehead at a wedding planned in Wayanad",
     intro: [
-      "We were born in Wayanad, and every celebration we plan carries a little of its mist, its tea gardens and its unhurried hospitality. Since 2012 our team has planned home weddings in Meenangadi, nikahs in Kalpetta town halls, receptions in Sulthan Bathery auditoriums and destination weddings in the resorts of Vythiri and Lakkidi.",
+      "We were born in Wayanad, and every celebration we plan carries a little of its mist, its tea gardens and its unhurried hospitality. Since 2012 our team has planned home weddings in Meenangadi, engagements in Kalpetta town halls, receptions in Sulthan Bathery auditoriums and destination weddings in the resorts of Vythiri and Lakkidi.",
       "Because we live here, we know which roads close in the monsoon, which halls have reliable power back-up, how long guests need to climb the Thamarassery churam, and which cooks make the best Malabar biryani for 1,500 guests. That local knowledge is what makes a Wayanad wedding feel effortless.",
     ],
     highlights: [
-      "Nikah, walima and reception planning for Malabar Muslim weddings",
-      "Hindu and Christian weddings, engagements and sadya catering",
+      "Weddings planned around your family's own traditions",
+      "Engagements, mehandi and haldi nights, receptions and sadya catering",
       "Resort and destination weddings in Vythiri, Lakkidi and Meppadi",
       "Guest buses and tempo travellers from Kozhikode airport and railway station",
       "Monsoon-ready marquees, generators and covered walkways",
@@ -55,8 +55,8 @@ export const locations: Location[] = [
         a: "November to May is the peak season — cool, dry and green. Monsoon weddings (June to September) are beautiful too; we plan covered seating, rain-proof stages and generator back-up for them.",
       },
       {
-        q: "Do you plan Muslim weddings (nikah and walima) in Wayanad?",
-        a: "Yes — nikah, walima, mylanchi (mehandi) nights and receptions are a large part of our work. We coordinate with the mahallu, arrange separate seating where families prefer it, and run Islamic and Arabian food counters in-house.",
+        q: "What kinds of weddings and events do you plan in Wayanad?",
+        a: "Every kind of celebration — engagements, mehandi nights, weddings, receptions and family functions. We plan each around your family's own traditions, menu and stage style, and run sadya, buffet and Arabian counters in-house.",
       },
       {
         q: "Can you arrange a destination wedding at a Wayanad resort?",
@@ -67,8 +67,6 @@ export const locations: Location[] = [
       "event management in Wayanad",
       "best event management Wayanad",
       "wedding planners in Wayanad",
-      "Muslim wedding planners Wayanad",
-      "nikah event management Wayanad",
       "destination wedding Wayanad",
       "wedding decorators Wayanad",
       "catering in Wayanad",
@@ -81,7 +79,7 @@ export const locations: Location[] = [
     district: "Wayanad district",
     title: "Event Management in Kalpetta — Weddings & Parties",
     description:
-      "Event planners based in Kalpetta, Wayanad: weddings, nikah, receptions, birthday parties and corporate events with in-house catering, décor and sound. Free WhatsApp quotes.",
+      "Event planners based in Kalpetta, Wayanad: weddings, receptions, birthday parties and corporate events with in-house catering, décor and sound. Free WhatsApp quotes.",
     image: img("pexels-36740097"),
     imageAlt: "Smiling bride lifting her red dupatta at a wedding in Kalpetta, Wayanad",
     intro: [
@@ -91,7 +89,7 @@ export const locations: Location[] = [
     highlights: [
       "Same-day site visits and décor previews in Kalpetta",
       "Auditorium weddings and home pandal weddings",
-      "Nikah stage, reception stage and photo-booth décor",
+      "Wedding stage, reception stage and photo-booth décor",
       "Birthday parties, house-warmings and family functions",
       "Corporate meets, launches and office events",
       "Sound, lighting and LED walls from our own stock",
@@ -116,16 +114,16 @@ export const locations: Location[] = [
     district: "Wayanad district",
     title: "Wedding & Event Planners in Sulthan Bathery",
     description:
-      "Weddings, nikah, receptions and catering in Sulthan Bathery, Wayanad — stage décor, Islamic counters, sound and guest transport by FD Events. Free quotes on WhatsApp.",
+      "Weddings, receptions and catering in Sulthan Bathery, Wayanad — stage décor, food counters, sound and guest transport by FD Events. Free quotes on WhatsApp.",
     image: img("pexels-38080274"),
     imageAlt: "Bride and groom at a night reception in Sulthan Bathery",
     intro: [
       "Sulthan Bathery celebrates big. Receptions here often run late into the night with large guest lists from across Wayanad and the Nilgiris border, so we plan for crowd flow, parking and food service that never makes guests wait.",
-      "We regularly set up reception stages, Islamic and Arabian food counters and live mappilappattu and song teams in Bathery's auditoriums and open grounds — and arrange guest buses from Gudalur, Mysuru-side villages and Kozhikode.",
+      "We regularly set up reception stages, Arabian and buffet food counters and live song teams in Bathery's auditoriums and open grounds — and arrange guest buses from Gudalur, Mysuru-side villages and Kozhikode.",
     ],
     highlights: [
       "Large receptions with smooth buffet and counter service",
-      "Mappilappattu, oppana and song team bookings",
+      "Song team, live band and entertainment bookings",
       "Islamic and Arabian counters — mandhi, alfaham, kabsa",
       "Parking marshals and event security for big crowds",
       "Guest buses from Gudalur, Kozhikode and nearby villages",
@@ -137,11 +135,11 @@ export const locations: Location[] = [
         a: "Yes. We plan multiple serving lines and counters, crowd and parking marshals, and back-up power, so large receptions run on time.",
       },
       {
-        q: "Do you arrange oppana or mappilappattu for weddings?",
-        a: "Yes — our song team and partner troupes perform mappilappattu, oppana and live music for mylanchi nights and receptions.",
+        q: "Do you arrange live music for weddings?",
+        a: "Yes — our song team, live singers and partner bands perform for mehandi nights, weddings and receptions.",
       },
     ],
-    keywords: ["wedding planners Sulthan Bathery", "event management Sulthan Bathery", "reception catering Sulthan Bathery", "mappilappattu team Wayanad"],
+    keywords: ["wedding planners Sulthan Bathery", "event management Sulthan Bathery", "reception catering Sulthan Bathery", "song team Wayanad"],
     nearby: ["wayanad", "kalpetta", "mananthavady"],
   },
   {
@@ -150,16 +148,16 @@ export const locations: Location[] = [
     district: "Wayanad district",
     title: "Event Management in Mananthavady, Wayanad",
     description:
-      "Weddings, mehandi nights, church weddings and family functions in Mananthavady — décor, catering, sound and transport by FD Events, Wayanad. Free quotes.",
+      "Weddings, mehandi nights, receptions and family functions in Mananthavady — décor, catering, sound and transport by FD Events, Wayanad. Free quotes.",
     image: img("pexels-29169318"),
     imageAlt: "Bride's hands with mehandi and gold bangles at a mehandi night in Mananthavady",
     intro: [
-      "Mananthavady brings together Muslim, Hindu and Christian families, and its weddings reflect that — mylanchi nights, temple weddings and church receptions, sometimes all in the same season. We plan each with its own customs, menus and stage styles.",
+      "Mananthavady's weddings are as varied as its families — mehandi nights, morning ceremonies, evening receptions and home functions, sometimes all in the same week. We plan each one around the family's own traditions, menus and stage style.",
       "Many Mananthavady families celebrate at home, so we often set up pandals, lighting and kitchens in courtyards and estates, working around narrow roads and hill-side plots that need careful planning for guest parking and catering trucks.",
     ],
     highlights: [
-      "Mylanchi and mehandi nights with henna artists",
-      "Church weddings and receptions",
+      "Mehandi nights with henna artists",
+      "Receptions in halls and open venues",
       "Home weddings with pandal, lighting and on-site kitchen",
       "Estate and plantation venues on hill-side plots",
       "Sound and light for evening functions",
@@ -172,7 +170,7 @@ export const locations: Location[] = [
       },
       {
         q: "Do you provide mehandi artists in Mananthavady?",
-        a: "Yes — bridal and guest mehandi artists for mylanchi nights, plus décor, music and snacks counters for the evening.",
+        a: "Yes — bridal and guest mehandi artists for mehandi nights, plus décor, music and snacks counters for the evening.",
       },
     ],
     keywords: ["event management Mananthavady", "wedding planners Mananthavady", "mehandi artist Mananthavady", "home wedding pandal Wayanad"],
@@ -189,7 +187,7 @@ export const locations: Location[] = [
     imageAlt: "Bride and groom holding hands at golden hour at a resort wedding",
     intro: [
       "Vythiri and Lakkidi are where Wayanad's resort weddings happen — misty mornings, valley views and guests who arrive for a whole weekend. These weddings need more than décor: room blocks, airport pick-ups, welcome dinners and plans for the weather.",
-      "We shortlist resorts to fit your guest count and budget, then design the full weekend — haldi or mylanchi by the pool, nikah or wedding in the morning, reception under the stars — with our own catering team working alongside the resort kitchen.",
+      "We shortlist resorts to fit your guest count and budget, then design the full weekend — haldi or mehandi by the pool, the wedding in the morning, reception under the stars — with our own catering team working alongside the resort kitchen.",
     ],
     highlights: [
       "Resort shortlisting and room-block coordination",
@@ -218,15 +216,15 @@ export const locations: Location[] = [
     district: "Kozhikode district",
     title: "Wedding & Event Management in Kozhikode (Calicut)",
     description:
-      "Event management in Kozhikode for Malabar weddings — nikah, walima, receptions, Islamic counters, stage décor and catering by FD Events. Free quotes on WhatsApp.",
+      "Event management in Kozhikode — weddings, receptions, Arabian counters, stage décor and catering by FD Events. Free quotes on WhatsApp.",
     image: img("pexels-10302294"),
-    imageAlt: "Malabar bride in a red hijab with traditional gold jewellery, Kozhikode",
+    imageAlt: "Bride in red with traditional gold jewellery at a wedding in Kozhikode",
     intro: [
-      "Kozhikode weddings are about food and hospitality first — and that is exactly where our team is strongest. We bring our Islamic and Arabian counters, Malabar biryani cooks and buffet service to auditoriums, convention centres and beachside venues across Calicut.",
-      "For families splitting celebrations between Kozhikode and Wayanad — a nikah in the city and a reception in the hills, or the other way round — one team handling both ends means one plan, one menu and no gaps in between.",
+      "Kozhikode weddings are about food and hospitality first — and that is exactly where our team is strongest. We bring our Arabian counters, Malabar biryani cooks and buffet service to auditoriums, convention centres and beachside venues across Calicut.",
+      "For families splitting celebrations between Kozhikode and Wayanad — a wedding in the city and a reception in the hills, or the other way round — one team handling both ends means one plan, one menu and no gaps in between.",
     ],
     highlights: [
-      "Nikah, walima and reception planning across Calicut",
+      "Wedding and reception planning across Calicut",
       "Malabar biryani, mandhi and Arabian counters",
       "Convention centre and auditorium setups",
       "Weddings split between Kozhikode and Wayanad",
@@ -243,41 +241,41 @@ export const locations: Location[] = [
         a: "Yes. We plan both events together — décor, catering, guest transport between them and timings around the churam.",
       },
     ],
-    keywords: ["event management Kozhikode", "wedding planners Calicut", "Muslim wedding planners Kozhikode", "nikah decoration Kozhikode", "Arabian counter Kozhikode"],
+    keywords: ["event management Kozhikode", "wedding planners Calicut", "wedding decorators Kozhikode", "Arabian counter Kozhikode"],
     nearby: ["wayanad", "malappuram", "vythiri"],
   },
   {
     slug: "malappuram",
     name: "Malappuram",
     district: "Malappuram district",
-    title: "Muslim Wedding Planners & Event Management in Malappuram",
+    title: "Wedding Planners & Event Management in Malappuram",
     description:
-      "Nikah, walima, mylanchi and reception planning in Malappuram — stage décor, Islamic counters, oppana and catering by FD Events. Free quotes on WhatsApp.",
+      "Weddings, receptions and family functions in Malappuram — stage décor, catering, music and logistics by FD Events. Free quotes.",
     image: img("pexels-38080278"),
     imageAlt: "Bride in red and gold bridal wear under evening lights at a Malappuram wedding",
     intro: [
-      "Malappuram weddings follow traditions we know closely — the mylanchi night with oppana and mappilappattu, the nikah with the mahallu, and a walima or reception that can welcome thousands of guests.",
-      "We plan the full sequence: stage and nikah décor, separate seating arrangements where families want them, Islamic and Arabian counters, snack and juice counters for the mylanchi night, and crowd and parking management for the reception.",
+      "Malappuram celebrates big — lively mehandi nights with music, wedding ceremonies, and receptions that welcome thousands of guests.",
+      "We plan the full sequence: stage décor, seating layouts designed with the family, sadya, buffet and Arabian counters, snack and juice counters for the night before, and crowd and parking management for the reception.",
     ],
     highlights: [
-      "Mylanchi nights with oppana and mappilappattu",
-      "Nikah stage and décor, coordinated with the mahallu",
-      "Walima and receptions for very large guest lists",
-      "Separate seating and serving arrangements on request",
+      "Mehandi nights with live music and song team",
+      "Wedding stage and décor",
+      "Receptions for very large guest lists",
+      "Seating and serving layouts planned with the family",
       "Islamic, Arabian, juice and snack counters",
     ],
     travel: "About 3 hours from Kalpetta — our crew travels a day ahead for large setups.",
     faqs: [
       {
-        q: "Do you plan complete Muslim weddings in Malappuram?",
-        a: "Yes — mylanchi, nikah, walima and reception, with décor, catering, music and logistics from one team.",
+        q: "Do you plan complete weddings in Malappuram?",
+        a: "Yes — engagement, mehandi night, wedding and reception, with décor, catering, music and logistics from one team.",
       },
       {
-        q: "Can you arrange separate seating for men and women?",
-        a: "Yes. We design the hall or pandal layout with separate seating, entrances and serving areas whenever families prefer it.",
+        q: "Can you plan the seating and food service for a very large reception?",
+        a: "Yes. We design the hall or pandal layout — seating, entrances, serving lines and counters — with the family, so thousands of guests are served without waiting.",
       },
     ],
-    keywords: ["Muslim wedding planners Malappuram", "event management Malappuram", "nikah planners Kerala", "mylanchi decoration Malappuram", "oppana team Malappuram"],
+    keywords: ["wedding planners Malappuram", "event management Malappuram", "wedding decorators Malappuram", "mehandi decoration Malappuram"],
     nearby: ["kozhikode", "wayanad"],
   },
   {
@@ -288,7 +286,7 @@ export const locations: Location[] = [
     description:
       "Weddings, receptions and catering in Kannur — stage décor, Malabar and Arabian counters, sound and guest transport by FD Events from Wayanad. Free quotes.",
     image: img("pexels-26990498"),
-    imageAlt: "Bride in a blush pink hijab and groom in an ivory sherwani at a reception in Kannur",
+    imageAlt: "Bride in blush pink and groom in an ivory sherwani at a reception in Kannur",
     intro: [
       "Kannur families often connect with Wayanad through Mananthavady and the Kottiyoor and Boys Town ghat roads, and many of our clients hold one function on each side. We bring the same team, menus and décor style to both.",
       "From auditorium receptions in Kannur town and Thalassery to home weddings in the hills of Iritty, we handle stage décor, catering with Thalassery-style biryani and Arabian counters, sound, lighting and guest transport.",

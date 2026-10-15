@@ -15,14 +15,14 @@ import { SocialLinks } from "./social";
 const slides = [
   {
     src: photo("pexels-16987433"),
-    caption: "The Nikah",
-    alt: "Groom kissing the forehead of his bride in a navy and gold hijab at a Malabar Muslim wedding",
+    caption: "The Wedding",
+    alt: "Groom kissing the forehead of his bride on their wedding day in Kerala",
     position: "object-[50%_30%]",
   },
   {
     src: photo("pexels-10302294"),
     caption: "The Bride",
-    alt: "Bride in a red hijab with a gold nath and traditional Malabar gold jewellery",
+    alt: "Bride in red with a gold nath and traditional Kerala gold jewellery",
     position: "object-[40%_25%]",
   },
   {
@@ -195,7 +195,7 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 1.05, ease }}
             className="mt-6 hidden max-w-lg text-lg text-cream/85 sm:block"
           >
-            Nikahs, receptions, catering and every detail in between — planned with old-fashioned care by{" "}
+            Weddings, receptions, catering and every detail in between — planned with old-fashioned care by{" "}
             {site.name}.
           </motion.p>
           <motion.div

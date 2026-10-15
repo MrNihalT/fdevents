@@ -15,7 +15,7 @@ const imageAlt = "Bride and groom at a night wedding reception in Kerala";
 export const metadata = pageMetadata({
   title: "Event Management Across Kerala — Areas We Serve",
   description:
-    "FD Events plans weddings, nikah, receptions and events across North Kerala — Wayanad, Kalpetta, Sulthan Bathery, Kozhikode, Malappuram and Kannur. Free quotes.",
+    "FD Events plans weddings, receptions and events across North Kerala — Wayanad, Kalpetta, Sulthan Bathery, Kozhikode, Malappuram and Kannur. Free quotes.",
   path: "/event-management",
   image,
   imageAlt,
@@ -23,7 +23,6 @@ export const metadata = pageMetadata({
     "event management Kerala",
     "best event management company in Kerala",
     "wedding planners Kerala",
-    "Muslim wedding planners Kerala",
     "event management North Kerala",
     "Malabar wedding planners",
   ],
@@ -35,8 +34,8 @@ const faqs = [
     a: "We are based in Kalpetta, Wayanad, and plan events across Wayanad and North Kerala — Kozhikode, Malappuram and Kannur — and travel further for weddings that need the full team.",
   },
   {
-    q: "Do you plan weddings for every community?",
-    a: "Yes. Muslim weddings (mylanchi, nikah, walima), Hindu weddings with sadya, and Christian church weddings and receptions — each with its own customs, menus and décor.",
+    q: "What kinds of weddings and events do you plan?",
+    a: "Every kind of celebration — engagements, mehandi nights, weddings, receptions and family functions — each planned around your family's own traditions, menu and décor.",
   },
 ];
 
@@ -55,7 +54,7 @@ export default function AreasPage() {
         imageAlt={imageAlt}
         crumbs={[{ name: "Areas we serve", path: "/event-management" }]}
       >
-        From our home in Wayanad to Kozhikode, Malappuram and Kannur — one team for weddings, nikahs, receptions and
+        From our home in Wayanad to Kozhikode, Malappuram and Kannur — one team for weddings, engagements, receptions and
         every event in between.
       </PageHero>
 

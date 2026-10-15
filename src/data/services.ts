@@ -37,16 +37,16 @@ export const services: Service[] = [
     icon: "rings",
     image: img("photo-1587271636175-90d58cdad458"),
     excerpt:
-      "Weddings planned end-to-end — nikah, walima, mylanchi, engagement and the reception night.",
+      "Weddings planned end-to-end — from the engagement and mehandi night to the reception.",
     description: [
       "A wedding in Wayanad deserves the calm of the hills and the warmth of a Kerala welcome. Our team plans every ritual and every moment — venue booking, mandap and stage, catering, guest transport, music and photography coordination — so your family can simply celebrate.",
-      "Malabar Muslim weddings — mylanchi nights, nikah and walima — Hindu weddings with sadya, Christian church weddings, grand receptions and destination weddings at resorts across Vythiri, Kalpetta and Sulthan Bathery: every wedding, planned with the same care.",
+      "Home weddings, auditorium weddings, grand receptions and destination weddings at resorts across Vythiri, Kalpetta and Sulthan Bathery — every wedding planned around your family's traditions, with the same care.",
     ],
     features: [
       "Complete planning & on-day coordination",
       "Venue, resort & auditorium booking",
-      "Nikah, walima, mylanchi & reception",
-      "Engagement, haldi & sadya",
+      "Engagement, haldi & mehandi nights",
+      "Wedding day & reception",
       "Theme-based stage and mandap décor",
       "Guest hospitality & accommodation",
       "Destination weddings in Wayanad",
@@ -54,8 +54,7 @@ export const services: Service[] = [
     keywords: [
       "wedding planners in Wayanad",
       "marriage event management Kerala",
-      "Muslim wedding planners Kerala",
-      "nikah event management Wayanad",
+      "wedding planners Kerala",
       "destination wedding Wayanad",
     ],
   },

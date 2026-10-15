@@ -18,7 +18,7 @@ import { photo } from "@/lib/images";
 
 export const metadata: Metadata = {
   description:
-    "Wayanad's trusted event management team & wedding planners. Weddings, nikah and receptions across Kerala — catering, décor, Islamic counters, mehandi. Free quotes.",
+    "Wayanad's trusted event management team & wedding planners. Weddings, engagements and receptions across Kerala — catering, stage décor, mehandi and more. Free quotes.",
   alternates: { canonical: "/" },
 };
 
@@ -28,8 +28,8 @@ const homeFaqs = [
     a: "We have planned weddings and events in Wayanad since 2012 with our own in-house team — décor, catering, Islamic and buffet counters, mehandi, sound, cars, buses and security — so one call covers everything, and we know local venues, seasons and roads first-hand.",
   },
   {
-    q: "Do you plan Muslim weddings in Kerala — nikah, walima and mylanchi?",
-    a: "Yes. Malabar Muslim weddings are a large part of our work: mylanchi nights with oppana and mappilappattu, nikah stage and décor, walima and receptions, separate seating where families prefer it, and Islamic and Arabian food counters.",
+    q: "What kinds of weddings and events do you plan?",
+    a: "Every kind of celebration — engagements, mehandi nights, weddings, receptions, birthdays, house-warmings and corporate events. Each one is planned around your family's own traditions, menu, music and stage style, from the first function to the last.",
   },
   {
     q: "Do you only work in Wayanad?",
@@ -67,7 +67,7 @@ export default async function Home() {
             <ImageCurtain className="aspect-[4/5]">
               <Image
                 src={photo("pexels-36740097")}
-                alt="Smiling bride lifting her red hijab dupatta at a Malabar wedding planned by FD Events"
+                alt="Smiling bride lifting her red dupatta at a wedding planned by FD Events"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 34vw, 80vw"
@@ -189,8 +189,8 @@ export default async function Home() {
             Kerala&apos;s celebrations, <em>rooted</em> in Wayanad.
           </h2>
           <p className="mt-8 text-lg text-muted">
-            From nikahs and walimas in Malabar to temple weddings with sadya and church receptions, {site.name} plans
-            weddings and events for every family — in Wayanad, Kozhikode, Malappuram, Kannur and beyond.
+            From intimate home weddings to grand receptions for thousands of guests, {site.name} plans weddings and
+            events for every family — in Wayanad, Kozhikode, Malappuram, Kannur and beyond.
           </p>
           <ul className="mt-10 grid grid-cols-2 gap-x-8 border-t-[1.5px] border-ink sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
             {locations.map((l) => (

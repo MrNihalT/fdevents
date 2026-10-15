@@ -31,8 +31,6 @@ export const metadata: Metadata = {
     "best event management company in Kerala",
     "event management Kerala",
     "wedding planners Kerala",
-    "Muslim wedding planners Kerala",
-    "nikah event management",
     "Malabar wedding planners",
     "wedding planners Kozhikode",
     "event management Malappuram",
