@@ -195,7 +195,7 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 1.05, ease }}
             className="mt-6 hidden max-w-lg text-lg text-cream/85 sm:block"
           >
-            Weddings, receptions, catering and every detail in between — planned with old-fashioned care by{" "}
+            Weddings, receptions, catering and every detail in between — planned with thoughtful care by{" "}
             {site.name}.
           </motion.p>
           <motion.div

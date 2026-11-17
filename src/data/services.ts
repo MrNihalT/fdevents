@@ -65,7 +65,7 @@ export const services: Service[] = [
     icon: "pot",
     image: img("photo-1701579231305-d84d8af9a3fd"),
     excerpt:
-      "Authentic Kerala sadya, Malabar biryani, North Indian, Chinese and continental menus cooked fresh on site.",
+      "Authentic Kerala sadya, Malabar biryani, North Indian, South Indian and continental menus cooked fresh on site.",
     description: [
       "Our kitchen team has served everything from intimate family functions to receptions of 3,000+ guests. We cook fresh, serve hot and keep the hygiene standards your guests expect.",
       "Choose a traditional banana-leaf sadya with 26 dishes, a Malabar biryani feast, or a multi-cuisine spread tailored to your guest list.",
@@ -73,7 +73,7 @@ export const services: Service[] = [
     features: [
       "Traditional Kerala sadya on banana leaf",
       "Malabar biryani & mandhi",
-      "North Indian, Chinese & continental",
+      "North Indian, South Indian & continental",
       "Trained, uniformed service staff",
       "Welcome drinks & live stations",
       "Hygienic, on-site live cooking",
@@ -148,7 +148,7 @@ export const services: Service[] = [
   },
   {
     slug: "food-dessert-counter",
-    name: "Food & Dessert",
+    name: "Food & Desserts",
     title: "Food & Dessert Counters",
     icon: "cake",
     image: img("photo-1488477181946-6428a0291777"),

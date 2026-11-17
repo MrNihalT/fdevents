@@ -10,6 +10,8 @@ export const site = {
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
   phone: "+91 85909 62100",
   phoneRaw: "+918590962100",
+  secondaryPhone: "+91 97785 48881",
+  secondaryPhoneRaw: "+919778548881",
   whatsapp: "918590962100",
   email: "hello@fdevents.in",
   address: {
@@ -41,7 +43,6 @@ export const site = {
     facebook: "https://facebook.com/",
     youtube: "https://youtube.com/",
   },
-  established: 2012,
   defaultWhatsAppMessage:
     "Hello FD Events! I found you on your website and would like to enquire about an event. Please share the details.",
 } as const;

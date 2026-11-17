@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { FaqAccordion } from "@/components/faq-accordion";
 import { Hero } from "@/components/hero";
 import { JsonLd, faqJsonLd } from "@/components/json-ld";
 import { ServiceMarquee } from "@/components/marquee";
@@ -11,6 +12,7 @@ import { ServiceCard } from "@/components/service-card";
 import { WorkGrid } from "@/components/work-grid";
 import { YouTubeLite } from "@/components/youtube";
 import { site } from "@/config/site";
+import { about } from "@/data/company";
 import { locations } from "@/data/locations";
 import { getService, services } from "@/data/services";
 import { getGallery, getReviews, getVideos } from "@/lib/content";
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
 const homeFaqs = [
   {
     q: "Why choose FD Events as your event management team in Wayanad?",
-    a: "We have planned weddings and events in Wayanad since 2012 with our own in-house team — décor, catering, Islamic and buffet counters, mehandi, sound, cars, buses and security — so one call covers everything, and we know local venues, seasons and roads first-hand.",
+    a: "We have planned weddings and events in Wayanad for years with our own in-house team — décor, catering, Islamic and buffet counters, mehandi, sound, cars, buses and security — so one call covers everything, and we know local venues, seasons and roads first-hand.",
   },
   {
     q: "What kinds of weddings and events do you plan?",
@@ -46,8 +48,7 @@ const featured = ["wedding-management", "catering", "stage-events", "islamic-cou
   .filter((s) => s !== undefined);
 
 const stats = [
-  { value: new Date().getFullYear() - site.established, suffix: "+", label: "Years of celebrations" },
-  { value: 1500, suffix: "+", label: "Events crafted" },
+  { value: "Years", suffix: "", label: "Of event experience" },
   { value: services.length, suffix: "", label: "Services, one team" },
 ];
 
@@ -95,22 +96,15 @@ export default async function Home() {
           <h2 className="display mt-6 text-5xl text-ink sm:text-7xl">
             Old-world grace, <em>Wayanad</em> warmth.
           </h2>
-          <p className="mt-8 text-lg text-muted">
-            In the misty hills of Wayanad, {site.name} has spent over a decade creating weddings and celebrations
-            that feel personal, graceful and unforgettable. From a traditional wedding at home to a grand resort
-            reception, our team handles every detail — so your family can simply be present.
-          </p>
-          <p className="mt-5 text-lg text-muted">
-            Décor, catering, Islamic and buffet counters, mehandi, music, sound, premium cars, buses and security —
-            all crafted in-house, all with the same care.
-          </p>
+          <p className="mt-8 text-lg text-muted">{about.introduction}</p>
+          <p className="mt-5 text-lg text-muted">{about.services}</p>
 
-          <dl className="mt-12 grid grid-cols-3 border-y-[1.5px] border-ink">
+          <dl className="mt-12 grid grid-cols-2 border-y-[1.5px] border-ink">
             {stats.map((s, i) => (
               <div key={s.label} className={`flex flex-col-reverse py-6 ${i ? "border-l border-dashed border-rule pl-5" : ""}`}>
                 <dt className="mt-2 font-mono text-[0.7rem] uppercase leading-snug tracking-[0.1em] text-muted">{s.label}</dt>
                 <dd className="display text-4xl text-wine sm:text-6xl">
-                  <CountUp to={s.value} suffix={s.suffix} />
+                  {typeof s.value === "number" ? <CountUp to={s.value} suffix={s.suffix} /> : s.value}
                 </dd>
               </div>
             ))}
@@ -209,22 +203,7 @@ export default async function Home() {
           </ul>
         </Reveal>
         <Reveal delay={0.15}>
-          <div className="divide-y divide-dashed divide-rule border-y-[1.5px] border-ink">
-            {homeFaqs.map((f, i) => (
-              <details key={f.q} className="group py-6" open={i === 0}>
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
-                  <h3 className="display text-2xl leading-snug text-ink">{f.q}</h3>
-                  <span
-                    aria-hidden="true"
-                    className="mt-1 font-mono text-2xl text-wine transition-transform duration-300 group-open:rotate-45"
-                  >
-                    +
-                  </span>
-                </summary>
-                <p className="mt-4 text-muted">{f.a}</p>
-              </details>
-            ))}
-          </div>
+          <FaqAccordion items={homeFaqs} />
         </Reveal>
       </section>
 

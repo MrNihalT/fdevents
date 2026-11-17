@@ -61,7 +61,7 @@ export default function AreasPage() {
       <section className="mx-auto max-w-[90rem] px-6 py-28 sm:px-8 lg:py-36">
         <Reveal>
           <SectionHeading tag="Choose your town" title={<>Where we <em>celebrate</em></>}>
-            {site.name} has planned celebrations across North Kerala since {site.established}. Pick a place to see how
+            {site.name} has planned celebrations across North Kerala for years. Pick a place to see how
             we plan events there.
           </SectionHeading>
         </Reveal>

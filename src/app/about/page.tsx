@@ -4,6 +4,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { SectionHeading } from "@/components/ornament";
 import { PageHero } from "@/components/page-hero";
 import { site } from "@/config/site";
+import { about, specialities, reasonsToChoose, workingProcess } from "@/data/company";
 import { whatsappLink } from "@/lib/whatsapp";
 import { photo } from "@/lib/images";
 import { pageMetadata } from "@/lib/seo";
@@ -11,19 +12,12 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "About FD Events — Wedding Planners in Wayanad",
   description:
-    "Meet FD Events: a Wayanad team of planners, chefs, decorators, mehandi artists, musicians and drivers creating graceful weddings and celebrations since 2012.",
+    "Meet FD Events: a Wayanad team of planners, chefs, decorators, mehandi artists, musicians and drivers creating graceful weddings and celebrations for years.",
   path: "/about",
   image: photo("photo-1583939003579-730e3918a45a"),
   imageAlt: "Couple celebrating with guests at a wedding",
   keywords: ["about FD Events", "wedding planners Wayanad", "event management company Kalpetta"],
 });
-
-const steps = [
-  { title: "Consultation", text: "We meet — or chat on WhatsApp — to understand your dates, traditions, guests and budget." },
-  { title: "Design", text: "You receive a clear plan and itemised quotation: menu, décor, music, vehicles and staff." },
-  { title: "Preparation", text: "We book venues, source fresh ingredients and build your stage and décor." },
-  { title: "Celebration", text: "On the day, our coordinators run everything so your family can simply enjoy." },
-];
 
 const img = photo;
 
@@ -46,18 +40,11 @@ export default function AboutPage() {
         <Reveal>
           <p className="tag">Rooted in Wayanad</p>
           <h2 className="display mt-6 text-5xl sm:text-6xl">
-            A decade of <em>graceful</em> celebrations
+            Years of <em>graceful</em> celebrations
           </h2>
-          <p className="mt-8 text-muted">
-            {site.name} began in {site.established} as a small catering and décor team in Wayanad. Today we are a
-            complete event management house with our own chefs, décor artists, mehandi artists, song team, sound
-            technicians, drivers and security staff.
-          </p>
-          <p className="mt-5 text-muted">
-            We believe a celebration should feel personal. So we listen first — to your family&apos;s traditions, your
-            guests and your budget — and then craft an event that feels timeless.
-          </p>
-                    <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn btn-wine mt-10">
+          <p className="mt-8 text-muted">{about.introduction}</p>
+          <p className="mt-5 text-muted">{about.services}</p>
+          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn btn-wine mt-10">
             <WhatsAppIcon className="h-4 w-4" /> Talk to our planner
           </a>
         </Reveal>
@@ -77,13 +64,34 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
+      <section className="paper-section py-24">
+        <div className="mx-auto grid max-w-[90rem] gap-16 px-6 sm:px-8 lg:grid-cols-2">
+          {[
+            { title: "Our Specialities", items: specialities },
+            { title: "Why Choose FD", items: reasonsToChoose },
+          ].map(({ title, items }) => (
+            <Reveal key={title}>
+              <h2 className="display text-4xl text-wine sm:text-5xl">{title}</h2>
+              <ul className="mt-8 divide-y divide-rule border-y border-rule">
+                {items.map((item) => (
+                  <li key={item} className="flex items-start gap-4 py-5 text-lg text-ink">
+                    <span aria-hidden="true" className="text-wine">✦</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       <section className="wine-section py-28 lg:py-36">
         <div className="mx-auto max-w-[90rem] px-6 sm:px-8">
           <Reveal>
-            <SectionHeading tag="How we work" title={<>Four <em>graceful</em> steps</>} light />
+            <SectionHeading tag="Our working process" title={<>Five steps to a <em>memorable</em> celebration</>} light />
           </Reveal>
-          <Stagger className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s, i) => (
+          <Stagger className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
+            {workingProcess.map((s, i) => (
               <StaggerItem key={s.title} className="border-t-[1.5px] border-cream/40 pt-8">
                 <span className="font-mono text-sm text-mustard-soft">Nº {String(i + 1).padStart(2, "0")}</span>
                 <h3 className="display mt-4 text-3xl">{s.title}</h3>

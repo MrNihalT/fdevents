@@ -38,7 +38,6 @@ export function siteJsonLd() {
         priceRange: "₹₹",
         currenciesAccepted: "INR",
         paymentAccepted: "Cash, UPI, Bank transfer",
-        foundingDate: String(site.established),
         address: {
           "@type": "PostalAddress",
           streetAddress: address.street,
@@ -55,13 +54,13 @@ export function siteJsonLd() {
           opens: "08:00",
           closes: "21:00",
         },
-        contactPoint: {
+        contactPoint: [site.phoneRaw, site.secondaryPhoneRaw].map((telephone) => ({
           "@type": "ContactPoint",
-          telephone: site.phoneRaw,
+          telephone,
           contactType: "customer service",
           areaServed: "IN",
           availableLanguage: ["English", "Malayalam"],
-        },
+        })),
         areaServed: site.areaServed.map((name) => ({ "@type": "City", name })),
         knowsAbout: services.map((s) => s.name),
         // Only real profile URLs — a bare "facebook.com/" would confuse Google's entity matching.

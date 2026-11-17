@@ -37,7 +37,7 @@ export const locations: Location[] = [
     image: img("pexels-16987433"),
     imageAlt: "Groom kissing his bride's forehead at a wedding planned in Wayanad",
     intro: [
-      "We were born in Wayanad, and every celebration we plan carries a little of its mist, its tea gardens and its unhurried hospitality. Since 2012 our team has planned home weddings in Meenangadi, engagements in Kalpetta town halls, receptions in Sulthan Bathery auditoriums and destination weddings in the resorts of Vythiri and Lakkidi.",
+      "We were born in Wayanad, and every celebration we plan carries a little of its mist, its tea gardens and its unhurried hospitality. For years, our team has planned home weddings in Meenangadi, engagements in Kalpetta town halls, receptions in Sulthan Bathery auditoriums and destination weddings in the resorts of Vythiri and Lakkidi.",
       "Because we live here, we know which roads close in the monsoon, which halls have reliable power back-up, how long guests need to climb the Thamarassery churam, and which cooks make the best Malabar biryani for 1,500 guests. That local knowledge is what makes a Wayanad wedding feel effortless.",
     ],
     highlights: [

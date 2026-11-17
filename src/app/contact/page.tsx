@@ -23,16 +23,17 @@ export const metadata = pageMetadata({
 
 export default function ContactPage() {
   const { address } = site;
-  const mapQuery = encodeURIComponent(`${address.locality}, ${address.district}, Kerala`);
+  const mapQuery = encodeURIComponent(`${address.street}, ${address.locality}, ${address.district}, ${address.region} ${address.postalCode}`);
 
   const details = [
     { icon: PhoneIcon, label: "Call us", value: site.phone, href: `tel:${site.phoneRaw}` },
+    { icon: PhoneIcon, label: "Alternate number", value: site.secondaryPhone, href: `tel:${site.secondaryPhoneRaw}` },
     { icon: WhatsAppIcon, label: "WhatsApp", value: site.phone, href: whatsappLink(), external: true },
     { icon: MailIcon, label: "Email", value: site.email, href: `mailto:${site.email}` },
     {
       icon: PinIcon,
       label: "Visit",
-      value: `${address.street}, ${address.locality}, ${address.district} ${address.postalCode}`,
+      value: `${address.street}, ${address.locality}, ${address.district}, ${address.region} ${address.postalCode}`,
     },
     { icon: ClockIcon, label: "Hours", value: "Every day · 8 AM – 9 PM" },
   ];
