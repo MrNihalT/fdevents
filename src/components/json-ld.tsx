@@ -61,7 +61,7 @@ export function siteJsonLd() {
           areaServed: "IN",
           availableLanguage: ["English", "Malayalam"],
         })),
-        areaServed: site.areaServed.map((name) => ({ "@type": "City", name })),
+        areaServed: site.areaServed.map((name) => ({ "@type": "Place", name })),
         knowsAbout: services.map((s) => s.name),
         // Only real profile URLs — a bare "facebook.com/" would confuse Google's entity matching.
         sameAs: Object.values(site.social).filter((u) => new URL(u).pathname.length > 1),
@@ -97,7 +97,7 @@ export function serviceJsonLd(s: Service) {
     image: `${site.url}${s.image}`,
     url: `${site.url}/services/${s.slug}`,
     provider: { "@id": businessId },
-    areaServed: site.areaServed.map((name) => ({ "@type": "City", name })),
+    areaServed: site.areaServed.map((name) => ({ "@type": "Place", name })),
   };
 }
 

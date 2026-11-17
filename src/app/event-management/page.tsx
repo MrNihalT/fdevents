@@ -13,7 +13,7 @@ const image = photo("pexels-38080272");
 const imageAlt = "Bride and groom at a night wedding reception in Kerala";
 
 export const metadata = pageMetadata({
-  title: "Event Management Across Kerala — Areas We Serve",
+  title: "Event Management in Kerala — Weddings & Parties",
   description:
     "FD Events plans weddings, receptions and events across North Kerala — Wayanad, Kalpetta, Sulthan Bathery, Kozhikode, Malappuram and Kannur. Free quotes.",
   path: "/event-management",
@@ -21,6 +21,7 @@ export const metadata = pageMetadata({
   imageAlt,
   keywords: [
     "event management Kerala",
+    "best event management in Kerala",
     "best event management company in Kerala",
     "wedding planners Kerala",
     "event management North Kerala",
@@ -29,6 +30,10 @@ export const metadata = pageMetadata({
 });
 
 const faqs = [
+  {
+    q: "How do I choose the best event management in Kerala for my event?",
+    a: "Compare teams on their portfolio, local knowledge, planning process and a clear quotation for your guest count. FD Events is based in Wayanad and plans weddings, receptions, parties and corporate events across North Kerala, bringing décor, catering, entertainment and guest transport together with one team. Contact us to check availability for your location.",
+  },
   {
     q: "Which parts of Kerala does FD Events cover?",
     a: "We are based in Kalpetta, Wayanad, and plan events across Wayanad and North Kerala — Kozhikode, Malappuram and Kannur — and travel further for weddings that need the full team.",

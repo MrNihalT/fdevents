@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { JsonLd, siteJsonLd } from "@/components/json-ld";
 import { MotionProvider } from "@/components/motion";
+import { PwaRegistration } from "@/components/pwa";
 import { WhatsAppFloat } from "@/components/whatsapp";
 import { site } from "@/config/site";
 import "./globals.css";
@@ -26,8 +27,13 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  manifest: "/manifest.webmanifest",
+  appleWebApp: { capable: true, title: site.shortName, statusBarStyle: "default" },
   keywords: [
     "best event management in Wayanad",
+    "best event management team in Wayanad",
+    "best catering team in Wayanad",
+    "best event management in Kerala",
     "best event management company in Kerala",
     "event management Kerala",
     "wedding planners Kerala",
@@ -99,6 +105,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <JsonLd data={siteJsonLd()} />
+        <PwaRegistration />
         <MotionProvider>
           <Header />
           <main id="main" className="flex-1">

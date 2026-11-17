@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FaqAccordion } from "@/components/faq-accordion";
@@ -17,14 +16,36 @@ import { locations } from "@/data/locations";
 import { getService, services } from "@/data/services";
 import { getGallery, getReviews, getVideos } from "@/lib/content";
 import { photo } from "@/lib/images";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  description:
-    "Wayanad's trusted event management team & wedding planners. Weddings, engagements and receptions across Kerala — catering, stage décor, mehandi and more. Free quotes.",
-  alternates: { canonical: "/" },
+export const metadata = {
+  ...pageMetadata({
+    title: "Event Management & Catering in Wayanad",
+    description:
+      "Plan your celebration with FD Events, a Wayanad event management and catering team. Weddings, décor and complete event services in Kerala. Get a quote.",
+    path: "/",
+    image: "/opengraph-image",
+    imageAlt: "FD Events — event management and catering in Wayanad, Kerala",
+    keywords: [
+      "best event management in Wayanad",
+      "best event management team in Wayanad",
+      "best catering team in Wayanad",
+      "best event management in Kerala",
+      "wedding planners Wayanad",
+    ],
+  }),
+  title: { absolute: "Event Management & Catering in Wayanad | FD Events" },
 };
 
 const homeFaqs = [
+  {
+    q: "How do I choose the best event management team in Wayanad?",
+    a: "Look at the team's event portfolio, ask who coordinates the day, and compare what each quotation includes. FD Events brings creative concepts, a dedicated team, premium decorations and budget-friendly packages together from our Kalpetta base. Share your date, guest count and ideas so we can plan around your needs.",
+  },
+  {
+    q: "Looking for the best catering team in Wayanad?",
+    a: "Choose a catering team around your guests' tastes, dietary needs, service style and budget. Our in-house team arranges Kerala sadya, Malabar biryani, South Indian, North Indian and continental menus, with buffet, Islamic and dessert counters. Contact FD Events to discuss a menu and quotation for your celebration.",
+  },
   {
     q: "Why choose FD Events as your event management team in Wayanad?",
     a: "We have planned weddings and events in Wayanad for years with our own in-house team — décor, catering, Islamic and buffet counters, mehandi, sound, cars, buses and security — so one call covers everything, and we know local venues, seasons and roads first-hand.",
@@ -94,10 +115,17 @@ export default async function Home() {
         <Reveal delay={0.15}>
           <p className="tag">Welcome to {site.name}</p>
           <h2 className="display mt-6 text-5xl text-ink sm:text-7xl">
-            Old-world grace, <em>Wayanad</em> warmth.
+            Event management with <em>Wayanad</em> warmth.
           </h2>
           <p className="mt-8 text-lg text-muted">{about.introduction}</p>
           <p className="mt-5 text-lg text-muted">{about.services}</p>
+          <p className="mt-5 text-muted">
+            Looking for the best event management in Wayanad for your celebration? Explore our{" "}
+            <Link href="/event-management/wayanad" className="underline underline-offset-4">Wayanad event planning services</Link>,{" "}
+            <Link href="/services/catering" className="underline underline-offset-4">catering team and menus</Link>, and{" "}
+            <Link href="/event-management" className="underline underline-offset-4">event management across Kerala</Link>.
+            We start with your ideas, traditions and budget.
+          </p>
 
           <dl className="mt-12 grid grid-cols-2 border-y-[1.5px] border-ink">
             {stats.map((s, i) => (

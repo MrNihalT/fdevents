@@ -31,7 +31,7 @@ export const locations: Location[] = [
     slug: "wayanad",
     name: "Wayanad",
     district: "Wayanad district",
-    title: "Event Management & Wedding Planners in Wayanad",
+    title: "Event Management Team in Wayanad",
     description:
       "Wayanad's own event management team — weddings, engagements & receptions, catering, stage décor, mehandi and resort events, planned end-to-end from Kalpetta. Free quotes.",
     image: img("pexels-16987433"),
@@ -51,6 +51,10 @@ export const locations: Location[] = [
     travel: "Our office is in Kalpetta, so every corner of Wayanad is within about an hour.",
     faqs: [
       {
+        q: "What should I look for in the best event management team in Wayanad?",
+        a: "Look for creative ideas, a dedicated coordination team, a clear plan and a package that fits your budget. At FD Events, our Kalpetta-based team handles weddings, catering, décor, music and guest transport together. Browse our services and discuss your event details with us before choosing your package.",
+      },
+      {
         q: "What is the best time of year for a wedding in Wayanad?",
         a: "November to May is the peak season — cool, dry and green. Monsoon weddings (June to September) are beautiful too; we plan covered seating, rain-proof stages and generator back-up for them.",
       },
@@ -66,6 +70,8 @@ export const locations: Location[] = [
     keywords: [
       "event management in Wayanad",
       "best event management Wayanad",
+      "best event management in Wayanad",
+      "best event management team in Wayanad",
       "wedding planners in Wayanad",
       "destination wedding Wayanad",
       "wedding decorators Wayanad",

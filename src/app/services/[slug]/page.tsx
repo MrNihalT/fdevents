@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { PhoneIcon, ServiceIcon, WhatsAppIcon } from "@/components/icons";
-import { JsonLd, serviceJsonLd } from "@/components/json-ld";
+import { FaqAccordion } from "@/components/faq-accordion";
+import { JsonLd, serviceJsonLd, faqJsonLd } from "@/components/json-ld";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { Seal, SectionHeading } from "@/components/ornament";
 import { PageHero } from "@/components/page-hero";
@@ -27,8 +28,10 @@ export async function generateMetadata({ params }: PageProps<"/services/[slug]">
   const service = getService(slug);
   if (!service) return {};
   return pageMetadata({
-    title: `${service.name} in Wayanad, Kerala`,
-    description: `${service.excerpt} Free quotes from ${site.name}, Wayanad.`,
+    title: service.slug === "catering" ? "Catering Team in Wayanad — Wedding & Event Menus" : `${service.name} in Wayanad, Kerala`,
+    description: service.slug === "catering"
+      ? "FD Events catering team in Wayanad: Kerala sadya, Malabar biryani, buffet and dessert counters for weddings and events. Ask for a menu and quote."
+      : `${service.excerpt} Free quotes from ${site.name}, Wayanad.`,
     path: `/services/${service.slug}`,
     image: service.image,
     imageAlt: service.title,
@@ -129,6 +132,14 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           </Reveal>
         </div>
       </section>
+
+      {service.faqs && (
+        <section className="mx-auto max-w-4xl px-6 py-24 sm:px-8">
+          <JsonLd data={faqJsonLd(service.faqs)} />
+          <SectionHeading tag="Catering questions" title={<>Plan your <em>menu</em></>} />
+          <FaqAccordion items={service.faqs} />
+        </section>
+      )}
 
       <section className="mx-auto max-w-[90rem] px-6 py-28 sm:px-8">
         <SectionHeading tag="You may also like" title={<>Other <em>services</em></>} />

@@ -11,6 +11,7 @@ export type Service = {
   description: string[];
   features: string[];
   keywords: string[];
+  faqs?: { q: string; a: string }[];
 };
 
 export type IconName =
@@ -61,7 +62,7 @@ export const services: Service[] = [
   {
     slug: "catering",
     name: "Catering",
-    title: "Catering Services in Wayanad — Kerala Sadya to Multi-Cuisine",
+    title: "Catering Team in Wayanad — Kerala Sadya & Wedding Menus",
     icon: "pot",
     image: img("photo-1701579231305-d84d8af9a3fd"),
     excerpt:
@@ -78,7 +79,21 @@ export const services: Service[] = [
       "Welcome drinks & live stations",
       "Hygienic, on-site live cooking",
     ],
-    keywords: ["catering in Wayanad", "Kerala sadya catering", "wedding catering Kalpetta"],
+    keywords: ["catering in Wayanad", "best catering team in Wayanad", "Kerala sadya catering", "wedding catering Kalpetta"],
+    faqs: [
+      {
+        q: "How do I choose the best catering team in Wayanad?",
+        a: "Compare menu choices, dietary requirements, service arrangements and what is included in the quotation. FD Events offers an in-house catering team with Kerala sadya, Malabar biryani, South Indian, North Indian and continental options. Tell us your guest count, venue and budget to plan your menu.",
+      },
+      {
+        q: "Can I book catering without a complete event package?",
+        a: "Yes. You can book our catering team on its own or combine catering with décor, buffet counters, Islamic counters, desserts and other event services.",
+      },
+      {
+        q: "Where do you provide catering in Wayanad?",
+        a: "Our team is based in Kalpetta and serves celebrations in Sulthan Bathery, Mananthavady, Vythiri, Meppadi and nearby areas. Share your venue and date with us to confirm availability and arrangements.",
+      },
+    ],
   },
   {
     slug: "stage-events",

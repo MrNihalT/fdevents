@@ -4,7 +4,7 @@ import { site } from "@/config/site";
 type PageSeo = {
   /** Under ~45 chars — the " | FD Events" suffix is added by the root title template. */
   title: string;
-  /** 140–160 chars, written for humans: it is the snippet shown in Google. */
+  /** Concise page summary; Google may choose a different snippet. */
   description: string;
   path: string;
   /** Photo used for link previews (WhatsApp, Facebook, X). */

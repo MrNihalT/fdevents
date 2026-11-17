@@ -4,6 +4,7 @@ import { locations } from "@/data/locations";
 import { services } from "@/data/services";
 import { whatsappLink } from "@/lib/whatsapp";
 import { ClockIcon, MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "./icons";
+import { InstallApp } from "./pwa";
 import { Logo } from "./logo";
 import { Seal } from "./ornament";
 import { SocialLinks } from "./social";
@@ -113,6 +114,8 @@ export function Footer() {
             </ul>
           </address>
         </div>
+
+        <div className="pb-8"><InstallApp /></div>
 
         <nav aria-label="Areas we serve" className="border-t border-dashed border-cream/25 py-8">
           <p className="flex flex-wrap items-baseline gap-x-5 gap-y-2 text-[0.95rem]">

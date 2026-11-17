@@ -169,7 +169,7 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.3, ease }}
             className="tag mb-5 max-w-md text-[0.7rem] leading-relaxed sm:mb-6 sm:max-w-none sm:text-[0.78rem]"
           >
-            Event management &amp; wedding planners · Wayanad, Kerala
+            Event management &amp; catering in Wayanad, Kerala
           </motion.h1>
           <p className="display text-[2.4rem] sm:text-5xl lg:text-[3.8rem] xl:text-[4.6rem]">
             {[
